@@ -11,17 +11,26 @@
 #include "pico_uart_transports.c"  //только так (расширене не .h ,а .c) работает передача данных по юарт. 
 #include "motors.h"
 #include "kinematics.h"
-#include "imu.h"
+#include "rpm.h"
+
 
 #include <geometry_msgs/msg/twist.h>
 #include <geometry_msgs/msg/vector3.h>
 #include <sensor_msgs/msg/imu.h>
+#include <geometry_msgs/msg/quaternion.h>
+
+rpm current_rpm;
+imp_num current_imp_num;
+struct repeating_timer timer;
 
 const uint LED_PIN = 25;
 int cnt = 1;
 
 rcl_publisher_t publisher;
 geometry_msgs__msg__Twist pub_twist_msg;
+
+rcl_publisher_t rpm_publisher;
+geometry_msgs__msg__Quaternion rpm_msg;
 
 //rcl_subscription_t subscriber;
 
@@ -31,9 +40,7 @@ geometry_msgs__msg__Twist twist_msg;
 //rcl_publisher_t imu_publisher;
 //sensor_msgs__msg__Imu imu_msg;
 
-//std_msgs__msg__Int32 msg;
-//std_msgs__msg__Int32 sub_msg;
-//std_msgs__msg__String sub_msg;
+
 
 Kinematics kinematics(
     Kinematics::LINO_BASE, 
@@ -50,11 +57,7 @@ Kinematics kinematics(
     LR_WHEELS_DISTANCE
 );
 
-//IMU imu;
 
-//void motors_init();
-
-//IMU::data imu_dat;
 
 Kinematics::velocities cmd_vel;
 
@@ -67,36 +70,21 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 	pub_twist_msg.angular.z = cmd_vel.angular_z;
 	
 	
-	rcl_ret_t ret = rcl_publish(&publisher, &pub_twist_msg, NULL);
+//	rcl_ret_t ret = rcl_publish(&publisher, &pub_twist_msg, NULL);
     
-//    imu_msg.angular_velocity.z = imu_dat.ang_z;  //Отправляется не угловая скорость, а угол!!!!!!
-//    imu_msg.linear_acceleration.x = imu_dat.lin_accel_x;
-//    imu_msg.linear_acceleration.y = imu_dat.lin_accel_y;
-
-//    rcl_ret_t ret1 = rcl_publish(&imu_publisher, &imu_msg, NULL);
     
-
-
-//    rcl_ret_t ret = rcl_publish(&publisher, &msg, NULL);
-//    msg.data++;
+    rpm_msg.w = current_rpm.rpm1;
+    rpm_msg.x = current_rpm.rpm2;
+    rpm_msg.y = current_rpm.rpm3;
+    rpm_msg.z = current_rpm.rpm4;
+  
+    rcl_ret_t ret = rcl_publish(&rpm_publisher, &rpm_msg, NULL);
 }
 
 
 void subscriber_callback(const void * msgin)
 {
-/*    
-// std_msgs__msg__Int32 - это структура из одного элемента data(см хедеры в файле std_msgs/msg/int32.h ), msg - указатель, и чтобы получить значение по указателю
-//нужно применять операцию -> https://www.c-cpp.ru/books/operatory-u
-const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  motor1_controller( (msg->data) );
-    if ((msg->data)== 0){
-        gpio_put(LED_PIN, 1);
-    }
-    
-    else{
-        gpio_put(LED_PIN, 0);
-    }
-*/
+
 const geometry_msgs__msg__Twist * msg = (const geometry_msgs__msg__Twist *)msgin;
 
 //Kinematics::velocities cmd_vel;
@@ -109,13 +97,7 @@ Kinematics::rpm req_rpm = kinematics.getRPM(
         msg->linear.y, 
         msg->angular.z
     );
-/*
-motor1_controller((int)msg->linear.x);
-motor2_controller((int)msg->linear.y);
-motor3_controller((int)msg->angular.z);
-*/
-//Kinematics kin;
-//Kinematics::rpm mot;
+
 
 //Kinematics::rpm rpm; // Объявляем название структуры rpm внутри класса Kinematics. Операцией объявления области видимости :: мы как бы смотрим изнутри класса
 //int motor1_rpm = rpm.motor1; //и тем самым видим уже его элементы, включая искомую структуру rpm. И уже по месту даем ей название rpm, а дальше по этому названию
@@ -150,8 +132,9 @@ int main()
 		pico_serial_transport_write,
 		pico_serial_transport_read
 	);
-//    imu.imu_init();
+
     motors_init();
+    impulse_counter_init();
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
 
@@ -179,15 +162,6 @@ int main()
 
     rclc_node_init_default(&node, "pico_node", "", &support);
     
-
-
-/*
-    rclc_subscription_init_default(
-        &twist_subscriber,
-        &node,
-        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
-        "Temur_lox_subscriber");
-*/
     rclc_subscription_init_default(
         &twist_subscriber,
         &node,
@@ -202,11 +176,11 @@ int main()
         ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
         "pico_publisher");
 
-//    rclc_publisher_init_default(
-//        &imu_publisher,
-//        &node,
-//        ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
-//        "imu_publisher");
+    rclc_publisher_init_default(
+        &rpm_publisher,
+        &node,
+        ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Quaternion),
+        "rpm_topic");
 
     rclc_timer_init_default(
         &timer,

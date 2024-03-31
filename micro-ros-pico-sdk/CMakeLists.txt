@@ -24,7 +24,8 @@ target_link_libraries(main
     kinematics
     pico_uart_transports
     motors
-    imu
+    rpm
+  
 )
 
 target_include_directories(main PUBLIC

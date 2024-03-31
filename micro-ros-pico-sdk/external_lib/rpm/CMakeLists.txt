@@ -1,11 +1,9 @@
-add_subdirectory(MPU6050)
+add_library(rpm INTERFACE)
+target_sources(rpm INTERFACE ${CMAKE_CURRENT_LIST_DIR}/rpm.cpp)
 
-add_library(imu INTERFACE)
-target_sources(imu INTERFACE ${CMAKE_CURRENT_LIST_DIR}/imu.cpp)
+target_include_directories(rpm INTERFACE ${CMAKE_CURRENT_LIST_DIR})
 
-target_include_directories(imu INTERFACE ${CMAKE_CURRENT_LIST_DIR})
-
-target_link_libraries(imu INTERFACE pico_stdlib I2Cdev MPU6050)
+target_link_libraries(rpm INTERFACE pico_stdlib hardware_pwm)
 
 # 1)сначала задаем название библиотеки, под которым к ней и всем включенным 
 # в нее функциям будут обращаться программы при ее (библиотеки) вызове
