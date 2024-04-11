@@ -15,27 +15,27 @@ link_directories(libmicroros)
 
 
 add_executable(main
-    main.cpp
+        main.cpp
 
 )
 target_link_libraries(main
-    pico_stdlib
-    microros
-    kinematics
-    pico_uart_transports
-    motors
-    imu
+        pico_stdlib
+        microros
+        kinematics
+        pico_uart_transports
+        motors
+        imu
+        rpm
+        servo
 )
 
 target_include_directories(main PUBLIC
-    libmicroros/include
-
+        libmicroros/include
 )
 
 
-
-SET(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -ffunction-sections -fdata-sections")
-SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -ffunction-sections -fdata-sections")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ffunction-sections -fdata-sections")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ffunction-sections -fdata-sections")
 
 # Configure Pico
 pico_enable_stdio_usb(main 1)
