@@ -1,3 +1,7 @@
+#include "hardware/pwm.h"
+#include "pico/stdlib.h"
+#include <cstdlib>
+
 // Определяем пины, к которым будем подключать шим-входы контроллера мотора
 #define PWM_PIN_VERTICAL 4 // Подключаем к GP2 - 4 ножка микроконтроллера
 #define PWM_PIN_HORIZON 11 // Подключаем к GP4 - 6 ножка микроконтроллера
@@ -23,9 +27,9 @@
 #define PWM_WRAP 1000
 // Заметим, что при таких настройках частота шима 125 000 000/6250 = 20 Кгц, что
 // необходимо для работы драйвера мотора
-#define SPEED 125000000 / (PWM_DIV * PWM_WRAP)
+#define SPEED (125000000 / (PWM_DIV * PWM_WRAP))
 
 void stepper_pwm_init();
 void stepper_direction_init();
 void stepper_init();
-void stepper(int number, int direction, int angle);
+void stepper(bool vertical, int8_t direction, int32_t angle);

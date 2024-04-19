@@ -15,25 +15,23 @@ link_directories(libmicroros)
 
 
 add_executable(pico_high
-    main.cpp
-
+        main.cpp
 )
 target_link_libraries(pico_high
-    pico_stdlib
-    microros
-    pico_uart_transports
-    stepper
+        pico_stdlib
+        microros
+        pico_uart_transports
+        stepper
+        locker
 )
 
 target_include_directories(pico_high PUBLIC
-    libmicroros/include
-
+        libmicroros/include
 )
 
 
-
-SET(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -ffunction-sections -fdata-sections")
-SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -ffunction-sections -fdata-sections")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ffunction-sections -fdata-sections")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ffunction-sections -fdata-sections")
 
 # Configure Pico
 pico_enable_stdio_usb(pico_high 1)

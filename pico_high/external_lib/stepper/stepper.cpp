@@ -1,26 +1,24 @@
 #include "stepper.h"
-#include "hardware/pwm.h"
-#include "pico/stdlib.h"
-#include <stdlib.h>
 
 /*https://www.webwork.co.uk/2023/06/raspberry-pi-pico-as-switching_21.html */
 
-void stepper(int number, int direction, int angle) {
-  if (number == 1) {
-    if (direction == 1) {
-      gpio_put(DIR_PIN_VERTICAL, 1);
+void stepper(bool vertical, int8_t direction, int32_t angle) {
+  if (vertical) {
+    if (direction > 0) {
+      gpio_put(DIR_PIN_VERTICAL, true);
     } else
-      gpio_put(DIR_PIN_VERTICAL, 0);
+      gpio_put(DIR_PIN_VERTICAL, false);
 
     pwm_set_gpio_level(PWM_PIN_VERTICAL, 500);
     sleep_ms((angle / (1.8 * SPEED)) * 1000);
     // Определяем необходимую скважность шим, от которой зависит скорость мотора
     pwm_set_gpio_level(PWM_PIN_VERTICAL, 0);
+
   } else {
-    if (direction == 1) {
-      gpio_put(DIR_PIN_HORIZON, 1);
+    if (direction > 0) {
+      gpio_put(DIR_PIN_HORIZON, true);
     } else
-      gpio_put(DIR_PIN_HORIZON, 0);
+      gpio_put(DIR_PIN_HORIZON, false);
 
     pwm_set_gpio_level(PWM_PIN_HORIZON, 500);
     sleep_ms((angle / (1.8 * SPEED)) * 1000);
@@ -77,8 +75,8 @@ void stepper_init() {
   gpio_set_dir(EN_PIN_VERTICAL, GPIO_OUT);
   gpio_set_dir(EN_PIN_HORIZON, GPIO_OUT);
 
-  gpio_put(EN_PIN_VERTICAL, 0);
-  gpio_put(EN_PIN_HORIZON, 0);
+  gpio_put(EN_PIN_VERTICAL, false);
+  gpio_put(EN_PIN_HORIZON, false);
 
   stepper_direction_init();
   stepper_pwm_init();
