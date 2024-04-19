@@ -1,10 +1,4 @@
-/**
- * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
-#include "rpm.h"
+#include "locker.hpp"
 #include "pico/stdlib.h"
 #include <cstdio>
 

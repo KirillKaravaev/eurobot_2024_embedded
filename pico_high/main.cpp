@@ -7,12 +7,12 @@
 #include <rmw_microros/rmw_microros.h>
 #include <std_msgs/msg/int32.h>
 
-#include "imu.h"
-#include "kinematics.h"
-#include "motors.h"
+// #include "imu.h"
+// #include "kinematics.h"
+// #include "motors.h"
 #include "pico/stdlib.h"
 #include "pico_uart_transports.c" //только так (расширене не .h ,а .c) работает передача данных по юарт.
-#include "servo.h"
+// #include "servo.h"
 #include "stepper.h"
 
 #include <geometry_msgs/msg/twist.h>
@@ -65,13 +65,6 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time) {
   //    msg.data++;
 }
 
-void servo_subscriber_callback(const void *msgin) {
-  const geometry_msgs__msg__Vector3 *msg =
-      (const geometry_msgs__msg__Vector3 *)msgin;
-  servo(msg->x, msg->y);
-  blink();
-}
-
 void stepper_subscriber_callback(const void *msgin) {
   const geometry_msgs__msg__Vector3 *msg =
       (const geometry_msgs__msg__Vector3 *)msgin;
@@ -80,14 +73,20 @@ void stepper_subscriber_callback(const void *msgin) {
 }
 
 int main() {
-  rmw_uros_set_custom_transport(
-      true, NULL, pico_serial_transport_open, pico_serial_transport_close,
-      pico_serial_transport_write, pico_serial_transport_read);
+  //  rmw_uros_set_custom_transport(
+  //      true, NULL, pico_serial_transport_open, pico_serial_transport_close,
+  //      pico_serial_transport_write, pico_serial_transport_read);
 
-  servo_init();
+  //  servo_init();
   stepper_init();
   gpio_init(LED_PIN);
   gpio_set_dir(LED_PIN, GPIO_OUT);
+
+  while (true) {
+
+    stepper(1, 1, 100);
+    stepper(0, 1, 100);
+  }
 
   rcl_timer_t timer;
   rcl_node_t node;
@@ -141,8 +140,6 @@ int main() {
   //    rclc_executor_add_subscription(&executor, &subscriber, &sub_msg,
   //    &subscriber_callback, ON_NEW_DATA);
 
-  rclc_executor_add_subscription(&executor, &servo_subscriber, &servo_msg,
-                                 &servo_subscriber_callback, ON_NEW_DATA);
   rclc_executor_add_subscription(&executor, &stepper_subscriber, &stepper_msg,
                                  &stepper_subscriber_callback, ON_NEW_DATA);
   //   gpio_put(LED_PIN, 1);

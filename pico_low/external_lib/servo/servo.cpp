@@ -1,38 +1,32 @@
 #include "servo.h"
 #include "hardware/pwm.h"
 #include "pico/stdlib.h"
-#include <stdlib.h>
+#include <cstdlib>
 
 /*https://www.webwork.co.uk/2023/06/raspberry-pi-pico-as-switching_21.html */
 
 void servo(int number, int angle) {
-  if (number == 1) {
-
+  if (number == 0) {
     pwm_set_gpio_level(SERVO_PWM_PIN_1, (250 + angle * 5.55));
+  }
 
+  else if (number == 1) {
+    pwm_set_gpio_level(SERVO_PWM_PIN_2, (250 + angle * 5.55));
   }
 
   else if (number == 2) {
-    pwm_set_gpio_level(SERVO_PWM_PIN_2, (250 + angle * 5.55));
-
+    pwm_set_gpio_level(SERVO_PWM_PIN_3, (250 + angle * 5.55));
   }
 
   else if (number == 3) {
-    pwm_set_gpio_level(SERVO_PWM_PIN_3, (250 + angle * 5.55));
-
+    pwm_set_gpio_level(SERVO_PWM_PIN_4, (250 + angle * 5.55));
   }
 
   else if (number == 4) {
-    pwm_set_gpio_level(SERVO_PWM_PIN_4, (250 + angle * 5.55));
-
+    pwm_set_gpio_level(SERVO_PWM_PIN_5, (250 + angle * 5.55));
   }
 
   else if (number == 5) {
-    pwm_set_gpio_level(SERVO_PWM_PIN_5, (250 + angle * 5.55));
-
-  }
-
-  else if (number == 6) {
     pwm_set_gpio_level(SERVO_PWM_PIN_6, (250 + angle * 5.55));
   }
 }

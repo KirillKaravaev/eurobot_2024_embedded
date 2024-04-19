@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 
 #include <rcl/error_handling.h>
 #include <rcl/rcl.h>
@@ -11,7 +11,8 @@
 #include "kinematics.h"
 #include "motors.h"
 #include "pico/stdlib.h"
-#include "pico_uart_transports.c" //только так (расширене не .h ,а .c)
+#include "pico_uart_transports.c"
+// только так (расширене не .h ,а .c)
 // работает передача данных по юарт.
 #include "rpm.h"
 #include "servo.h"
@@ -44,6 +45,8 @@ sensor_msgs__msg__Imu imu_msg;
 
 rcl_subscription_t servo_subscriber;
 geometry_msgs__msg__Vector3 servo_msg;
+
+//rcl_publisher_t locker_publisher;
 
 // std_msgs__msg__Int32 msg;
 // std_msgs__msg__Int32 sub_msg;
@@ -143,49 +146,45 @@ void subscriber_callback(const void *msgin) {
 }
 
 void servo_subscriber_callback(const void *msgin) {
-  const geometry_msgs__msg__Vector3 *msg =
-      (const geometry_msgs__msg__Vector3 *)msgin;
+  const auto *msg = (const geometry_msgs__msg__Vector3 *)msgin;
   servo(msg->x, msg->y);
 }
 
 int main() {
-  //  rmw_uros_set_custom_transport(
-  //      true, NULL, pico_serial_transport_open, pico_serial_transport_close,
-  //      pico_serial_transport_write, pico_serial_transport_read);
+  rmw_uros_set_custom_transport(
+      true, NULL, pico_serial_transport_open, pico_serial_transport_close,
+      pico_serial_transport_write, pico_serial_transport_read);
 
   motors_init();
-  unsigned int i = 0;
+  servo_init();
+  //  unsigned int i = 0;
   int sigh = 1;
 
-  while (true) {
-
-    float angle = 5.0 * sigh;
-
-    if (i % 100000) {
-
-      sigh *= -1;
-      // Простейшая мигалка
-      if (cnt == 1) {
-        gpio_put(LED_PIN, 1);
-        cnt = 0;
-      } else if (cnt == 0) {
-        gpio_put(LED_PIN, 0);
-        cnt = 1;
-      }
-    }
-
-    Kinematics::rpm req_rpm = kinematics.getRPM(0, 0, angle);
-
-    motor1_controller((int)req_rpm.motor1);
-    motor2_controller((int)req_rpm.motor2);
-    motor3_controller((int)req_rpm.motor3);
-    motor4_controller((int)req_rpm.motor4);
-
-    i++;
-
-    if (i == 3000000)
-      i = 0;
-  }
+  //  while (true) {
+  //
+  //    float angle = 50.0 * sigh;
+  //
+  //    //    if (i % 100000) {
+  //
+  //    //      sigh *= -1;
+  //    // Простейшая мигалка
+  //    //      if (cnt == 1) {
+  //    //        gpio_put(LED_PIN, 1);
+  //    //        cnt = 0;
+  //    //      } else if (cnt == 0) {
+  //    //        gpio_put(LED_PIN, 0);
+  //    //        cnt = 1;
+  //    //      }
+  //    //    }
+  //
+  //    motor1_controller((int)angle);
+  //    motor2_controller((int)angle);
+  //    motor3_controller((int)angle);
+  //    motor4_controller((int)angle);
+  //
+  //    for (int i = 0; i < 6; i++)
+  //      servo(i, 150 / 6 * i + 50);
+  //  }
 
   imu.imu_init();
   impulse_counter_init();
@@ -255,7 +254,7 @@ int main() {
                                  &servo_subscriber_callback, ON_NEW_DATA);
   rclc_executor_add_subscription(&executor, &twist_subscriber, &twist_msg,
                                  &subscriber_callback, ON_NEW_DATA);
-  //   gpio_put(LED_PIN, 1);
+  gpio_put(LED_PIN, 1);
 
   //    msg.data = 0;
   while (true) {

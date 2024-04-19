@@ -4,7 +4,7 @@
 #include "hardware/i2c.h"
 #include "imu.h"
 #include "pico/stdlib.h"
-#include <stdio.h>
+#include <cstdio>
 
 MPU6050 mpu;
 
