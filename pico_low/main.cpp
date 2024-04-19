@@ -1,5 +1,3 @@
-#include <cstdio>
-
 #include <rcl/error_handling.h>
 #include <rcl/rcl.h>
 #include <rclc/executor.h>
@@ -14,43 +12,44 @@
 #include "pico_uart_transports.c"
 // только так (расширене не .h ,а .c)
 // работает передача данных по юарт.
+#include "locker.h"
 #include "rpm.h"
 #include "servo.h"
 
-#include <geometry_msgs/msg/quaternion.h>
 #include <geometry_msgs/msg/twist.h>
 #include <geometry_msgs/msg/vector3.h>
+#include <nav_msgs/msg/odometry.h>
 #include <sensor_msgs/msg/imu.h>
+#include <std_msgs/msg/u_int8_multi_array.h>
+
+#define LED_PIN 26
+
+bool flag = true;
+
+bool locker_state_up = false;
+bool locker_state_down = false;
 
 rpm current_rpm;
 imp_num current_imp_num;
-struct repeating_timer timer;
-
-const uint LED_PIN = 25;
-int cnt = 1;
-
-rcl_publisher_t publisher;
-geometry_msgs__msg__Twist pub_twist_msg;
-
-// rcl_subscription_t subscriber;
+struct repeating_timer rpm_timer;
 
 rcl_publisher_t rpm_publisher;
-geometry_msgs__msg__Quaternion rpm_msg;
+nav_msgs__msg__Odometry odom_data;
+
+rcl_publisher_t imu_publisher;
+sensor_msgs__msg__Imu imu_data;
+
+rcl_publisher_t locker_publisher;
+std_msgs__msg__UInt8MultiArray locker_status;
+
+rcl_publisher_t servo_publisher;
+std_msgs__msg__UInt8MultiArray servo_status;
 
 rcl_subscription_t twist_subscriber;
 geometry_msgs__msg__Twist twist_msg;
 
-rcl_publisher_t imu_publisher;
-sensor_msgs__msg__Imu imu_msg;
-
 rcl_subscription_t servo_subscriber;
-geometry_msgs__msg__Vector3 servo_msg;
-
-//rcl_publisher_t locker_publisher;
-
-// std_msgs__msg__Int32 msg;
-// std_msgs__msg__Int32 sub_msg;
-// std_msgs__msg__String sub_msg;
+std_msgs__msg__UInt8MultiArray servo_move;
 
 Kinematics kinematics(Kinematics::LINO_BASE, MOTOR_MAX_RPM, MAX_RPM_RATIO,
 #ifdef BRUSH_MOTORS
@@ -61,133 +60,66 @@ Kinematics kinematics(Kinematics::LINO_BASE, MOTOR_MAX_RPM, MAX_RPM_RATIO,
 #endif
                       WHEEL_DIAMETER, LR_WHEELS_DISTANCE);
 
-IMU imu;
 IMU::data imu_dat;
-
-// void motors_init();
-
 Kinematics::velocities cmd_vel;
 
-void timer_callback(rcl_timer_t *timer, int64_t last_call_time) {
-
-  pub_twist_msg.linear.x = cmd_vel.linear_x;
-  pub_twist_msg.linear.y = cmd_vel.linear_y;
-  pub_twist_msg.angular.z = cmd_vel.angular_z;
-
-  rcl_ret_t ret = rcl_publish(&publisher, &pub_twist_msg, NULL);
-
-  imu_dat = imu.get_data();
-
-  imu_msg.angular_velocity.z =
-      imu_dat.ang_z; // Отправляется не угловая скорость, а угол!!!!!!
-  imu_msg.linear_acceleration.x = imu_dat.lin_accel_x;
-  imu_msg.linear_acceleration.y = imu_dat.lin_accel_y;
-
-  rcl_ret_t ret1 = rcl_publish(&imu_publisher, &imu_msg, NULL);
-
-  //    msg.data++;
+void blink() {
+  // Простейшая мигалка
+  gpio_put(LED_PIN, flag);
+  flag = !flag;
 }
 
-void subscriber_callback(const void *msgin) {
-  /*
-  // std_msgs__msg__Int32 - это структура из одного элемента data(см хедеры в
-  файле std_msgs/msg/int32.h ), msg - указатель, и чтобы получить значение по
-  указателю
-  //нужно применять операцию -> https://www.c-cpp.ru/books/operatory-u
-  const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-    motor1_controller( (msg->data) );
-      if ((msg->data)== 0){
-          gpio_put(LED_PIN, 1);
-      }
+void timer_callback(rcl_timer_t *timer, int64_t last_call_time) {
+  rcl_ret_t ret;
 
-      else{
-          gpio_put(LED_PIN, 0);
-      }
-  */
-  const geometry_msgs__msg__Twist *msg =
-      (const geometry_msgs__msg__Twist *)msgin;
+  imu_dat = IMU::get_data();
+  imu_data.angular_velocity.z =
+      imu_dat.ang_z; // Отправляется не угловая скорость, а угол!!!!!!
+  imu_data.linear_acceleration.x = imu_dat.lin_accel_x;
+  imu_data.linear_acceleration.y = imu_dat.lin_accel_y;
+  ret = rcl_publish(&imu_publisher, &imu_data, nullptr);
 
-  // Kinematics::velocities cmd_vel;
+
+
+  blink();
+}
+
+void motor_subscriber_callback(const void *msgin) {
+  const auto *msg = (const geometry_msgs__msg__Twist *)msgin;
+
   cmd_vel.linear_x = msg->linear.x;
   cmd_vel.linear_y = msg->linear.y;
   cmd_vel.angular_z = msg->angular.z;
 
   Kinematics::rpm req_rpm =
       kinematics.getRPM(msg->linear.x, msg->linear.y, msg->angular.z);
-  /*
-  motor1_controller((int)msg->linear.x);
-  motor2_controller((int)msg->linear.y);
-  motor3_controller((int)msg->angular.z);
-  */
-  // Kinematics kin;
-  // Kinematics::rpm mot;
 
-  // Kinematics::rpm rpm; // Объявляем название структуры rpm внутри класса
-  // Kinematics. Операцией объявления области видимости :: мы как бы смотрим
-  // изнутри класса int motor1_rpm = rpm.motor1; //и тем самым видим уже его
-  // элементы, включая искомую структуру rpm. И уже по месту даем ей название
-  // rpm, а дальше по этому названию
   motor1_controller((int)req_rpm.motor1); // обращаемся к элементу motor1
-  // int motor2_rpm = rpm.motor2;
   motor2_controller((int)req_rpm.motor2);
-  // int motor3_rpm = rpm.motor3;
   motor3_controller((int)req_rpm.motor3);
-  // int motor4_rpm = rpm.motor4;
   motor4_controller((int)req_rpm.motor4);
 
-  // Простейшая мигалка
-  if (cnt == 1) {
-    gpio_put(LED_PIN, 1);
-    cnt = 0;
-  } else if (cnt == 0) {
-    gpio_put(LED_PIN, 0);
-    cnt = 1;
-  }
+  blink();
 }
 
 void servo_subscriber_callback(const void *msgin) {
   const auto *msg = (const geometry_msgs__msg__Vector3 *)msgin;
-  servo(msg->x, msg->y);
+  servo_set_angle((uint8_t)msg->x, (int16_t)msg->y);
+
+  blink();
 }
 
 int main() {
   rmw_uros_set_custom_transport(
-      true, NULL, pico_serial_transport_open, pico_serial_transport_close,
+      true, nullptr, pico_serial_transport_open, pico_serial_transport_close,
       pico_serial_transport_write, pico_serial_transport_read);
 
-  motors_init();
-  servo_init();
-  //  unsigned int i = 0;
-  int sigh = 1;
-
-  //  while (true) {
-  //
-  //    float angle = 50.0 * sigh;
-  //
-  //    //    if (i % 100000) {
-  //
-  //    //      sigh *= -1;
-  //    // Простейшая мигалка
-  //    //      if (cnt == 1) {
-  //    //        gpio_put(LED_PIN, 1);
-  //    //        cnt = 0;
-  //    //      } else if (cnt == 0) {
-  //    //        gpio_put(LED_PIN, 0);
-  //    //        cnt = 1;
-  //    //      }
-  //    //    }
-  //
-  //    motor1_controller((int)angle);
-  //    motor2_controller((int)angle);
-  //    motor3_controller((int)angle);
-  //    motor4_controller((int)angle);
-  //
-  //    for (int i = 0; i < 6; i++)
-  //      servo(i, 150 / 6 * i + 50);
-  //  }
-
-  imu.imu_init();
+  motor_init_all();
+  servo_init_all();
+  lockers_init();
+  IMU::imu_init();
   impulse_counter_init();
+
   gpio_init(LED_PIN);
   gpio_set_dir(LED_PIN, GPIO_OUT);
 
@@ -210,53 +142,42 @@ int main() {
     return ret;
   }
 
-  rclc_support_init(&support, 0, NULL, &allocator);
+  rclc_support_init(&support, 0, nullptr, &allocator);
 
-  rclc_node_init_default(&node, "pico_node", "", &support);
+  rclc_node_init_default(&node, "pico_low", "", &support);
 
-  /*
-      rclc_subscription_init_default(
-          &twist_subscriber,
-          &node,
-          ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
-          "Temur_lox_subscriber");
-  */
   rclc_subscription_init_default(
       &twist_subscriber, &node,
       ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist), "cmd_vel");
 
   rclc_publisher_init_default(
-      &publisher, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
-      "pico_publisher");
-
-  rclc_publisher_init_default(
       &imu_publisher, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
-      "imu_topic");
+      "imu_data");
 
   rclc_publisher_init_default(
       &rpm_publisher, &node,
-      ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Quaternion), "rpm_topic");
+      ROSIDL_GET_MSG_TYPE_SUPPORT(nav_msgs, msg, Odometry), "odom");
 
   rclc_subscription_init_default(
       &servo_subscriber, &node,
-      ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Vector3), "servo_topic");
+      ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Vector3), "servo_move");
+
+  rclc_publisher_init_default(
+      &locker_publisher, &node,
+      ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Vector3),
+      "locker_status");
 
   rclc_timer_init_default(&timer, &support, RCL_MS_TO_NS(200), timer_callback);
 
-  //    std_msgs__msg__String__init(&sub_msg);
-
   rclc_executor_init(&executor, &support.context, 2, &allocator);
   rclc_executor_add_timer(&executor, &timer);
-  //    rclc_executor_add_subscription(&executor, &subscriber, &sub_msg,
-  //    &subscriber_callback, ON_NEW_DATA);
-
-  rclc_executor_add_subscription(&executor, &servo_subscriber, &servo_msg,
+  rclc_executor_add_subscription(&executor, &servo_subscriber, &servo_move,
                                  &servo_subscriber_callback, ON_NEW_DATA);
   rclc_executor_add_subscription(&executor, &twist_subscriber, &twist_msg,
-                                 &subscriber_callback, ON_NEW_DATA);
-  gpio_put(LED_PIN, 1);
+                                 &motor_subscriber_callback, ON_NEW_DATA);
 
-  //    msg.data = 0;
+  gpio_put(LED_PIN, true);
+
   while (true) {
     rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
   }

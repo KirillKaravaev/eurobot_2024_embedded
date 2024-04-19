@@ -7,40 +7,17 @@
 #include <rmw_microros/rmw_microros.h>
 #include <std_msgs/msg/int32.h>
 
-// #include "imu.h"
-// #include "kinematics.h"
-// #include "motors.h"
 #include "pico/stdlib.h"
 #include "pico_uart_transports.c" //только так (расширене не .h ,а .c) работает передача данных по юарт.
-// #include "servo.h"
 #include "stepper.h"
 
-#include <geometry_msgs/msg/twist.h>
 #include <geometry_msgs/msg/vector3.h>
-// #include <sensor_msgs/msg/imu.h>
 
 const uint LED_PIN = 25;
 int cnt = 1;
 
-rcl_publisher_t publisher;
-geometry_msgs__msg__Twist pub_twist_msg;
-
-// rcl_subscription_t subscriber;
-
-// rcl_subscription_t twist_subscriber;
-// geometry_msgs__msg__Twist twist_msg;
-
-rcl_subscription_t servo_subscriber;
-geometry_msgs__msg__Vector3 servo_msg;
-
 rcl_subscription_t stepper_subscriber;
 geometry_msgs__msg__Vector3 stepper_msg;
-
-// std_msgs__msg__Int32 msg;
-// std_msgs__msg__Int32 sub_msg;
-// std_msgs__msg__String sub_msg;
-
-// void stepper_init();
 
 // Простейшая мигалка
 void blink() {
@@ -77,7 +54,6 @@ int main() {
   //      true, NULL, pico_serial_transport_open, pico_serial_transport_close,
   //      pico_serial_transport_write, pico_serial_transport_read);
 
-  //  servo_init();
   stepper_init();
   gpio_init(LED_PIN);
   gpio_set_dir(LED_PIN, GPIO_OUT);
@@ -111,40 +87,20 @@ int main() {
 
   rclc_node_init_default(&node, "pico_node", "", &support);
 
-  /*
-      rclc_subscription_init_default(
-          &twist_subscriber,
-          &node,
-          ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
-          "Temur_lox_subscriber");
-  */
-  rclc_subscription_init_default(
-      &servo_subscriber, &node,
-      ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Vector3), "servo_topic");
-
   rclc_subscription_init_default(
       &stepper_subscriber, &node,
       ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Vector3),
       "stepper_topic");
 
-  rclc_publisher_init_default(
-      &publisher, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
-      "pico_publisher");
-
   rclc_timer_init_default(&timer, &support, RCL_MS_TO_NS(1000), timer_callback);
-
-  //    std_msgs__msg__String__init(&sub_msg);
 
   rclc_executor_init(&executor, &support.context, 3, &allocator);
   rclc_executor_add_timer(&executor, &timer);
-  //    rclc_executor_add_subscription(&executor, &subscriber, &sub_msg,
-  //    &subscriber_callback, ON_NEW_DATA);
 
   rclc_executor_add_subscription(&executor, &stepper_subscriber, &stepper_msg,
                                  &stepper_subscriber_callback, ON_NEW_DATA);
-  //   gpio_put(LED_PIN, 1);
+  gpio_put(LED_PIN, 1);
 
-  //    msg.data = 0;
   while (true) {
     rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
   }

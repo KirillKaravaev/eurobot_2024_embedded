@@ -1,6 +1,3 @@
-
-/******************************************************************Обозначения*********************************************************************************/
-
 #define LINO_BASE MECANUM // Mecanum drive robot
 
 #define MOTOR_MAX_RPM 140 // motor's max RPM
@@ -36,12 +33,10 @@
 
 #define RPM_TO_RPS 1 / 60
 
-/***************************************************************Библиотечные
- * функции***************************************************************************/
 // Про классы в С++ - http://cppstudio.com/post/439/   ,
 // https://learntutorials.net/ru/cplusplus/topic/508/классы---структуры
 
-float constrain(float x, float min, float max);
+double constrain(double x, double min, double max);
 
 class Kinematics {
 public:
@@ -50,16 +45,16 @@ public:
   base base_platform_;
 
   struct rpm {
-    float motor1;
-    float motor2;
-    float motor3;
-    float motor4;
+    double motor1;
+    double motor2;
+    double motor3;
+    double motor4;
   }; // motor;
 
   struct velocities {
-    float linear_x;
-    float linear_y;
-    float angular_z;
+    double linear_x;
+    double linear_y;
+    double angular_z;
   };
 
   struct pwm {
@@ -68,26 +63,28 @@ public:
     int motor3;
     int motor4;
   };
-  Kinematics(base robot_base, int motor_max_rpm, float max_rpm_ratio,
+  Kinematics(base robot_base, int motor_max_rpm, double max_rpm_ratio,
 #ifdef BRUSH_MOTORS
-             float motor_operating_voltage, float motor_power_max_voltage,
+             double motor_operating_voltage, double motor_power_max_voltage,
 #endif
 #ifdef BRUSHLESS_MOTORS
-             float max_rpm,
+             double max_rpm,
 #endif
-             float wheel_diameter, float wheels_y_distance);
-  velocities getVelocities(float rpm1, float rpm2, float rpm3, float rpm4);
-  rpm getRPM(float linear_x, float linear_y, float angular_z);
-  float getMaxRPM();
+             double wheel_diameter, double wheels_y_distance);
+  [[nodiscard]] velocities getVelocities(double rpm1, double rpm2, double rpm3,
+                                         double rpm4) const;
+  rpm getRPM(double linear_x, double linear_y, double angular_z);
+  [[nodiscard]] double getMaxRPM() const;
 
 private:
-  rpm calculateRPM(float linear_x, float linear_y, float angular_z);
-  int getTotalWheels(base robot_base);
+  [[nodiscard]] rpm calculateRPM(double linear_x, double linear_y,
+                                 double angular_z) const;
+  static int getTotalWheels(base robot_base);
 
-  float max_rpm_;
-  float wheels_y_distance_;
-  float pwm_res_;
-  float wheel_circumference_;
+  double max_rpm_;
+  double wheels_y_distance_;
+  double pwm_res_{};
+  double wheel_circumference_;
   int total_wheels_;
 };
 

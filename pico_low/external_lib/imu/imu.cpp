@@ -4,7 +4,6 @@
 #include "hardware/i2c.h"
 #include "imu.h"
 #include "pico/stdlib.h"
-#include <cstdio>
 
 MPU6050 mpu;
 
@@ -112,7 +111,7 @@ IMU::data IMU::get_data() {
     mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
     //                mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
   }
-  IMU::data data;
+  IMU::data data{};
   data.ang_x = ypr[2] * 180 / PI;
   data.ang_y = ypr[1] * 180 / PI;
   data.ang_z = ypr[0] * 180 / PI;

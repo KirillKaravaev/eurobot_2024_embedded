@@ -1,5 +1,3 @@
-/******************************************************************Обозначения*********************************************************************************/
-
 // Определяем пины, к которым будем подключать шим-входы контроллера мотора
 #define PWM_PIN_VERTICAL 4 // Подключаем к GP2 - 4 ножка микроконтроллера
 #define PWM_PIN_HORIZON 11 // Подключаем к GP4 - 6 ножка микроконтроллера
@@ -27,16 +25,7 @@
 // необходимо для работы драйвера мотора
 #define SPEED 125000000 / (PWM_DIV * PWM_WRAP)
 
-/***************************************************************Библиотечные
- * функции***************************************************************************/
-
 void stepper_pwm_init();
 void stepper_direction_init();
 void stepper_init();
-/*
-void motor1_controller(float speed );
-void motor2_controller(float speed );
-void motor3_controller(float speed );
-void motor4_controller(float speed );
-*/
 void stepper(int number, int direction, int angle);

@@ -1,3 +1,4 @@
+#include "pico/stdlib.h"
 #include <cstdio>
 
 #define IMP_CNT_PIN1 20
@@ -10,10 +11,6 @@
 
 // Колбэк-функции. Из-за специфики инициализации не полчается включить в
 // структуру, но оно и не надо, в данном случае это служебные функции
-void impulse_counter1_callback(uint gpio, uint32_t event);
-void impulse_counter2_callback(uint gpio, uint32_t event);
-void impulse_counter3_callback(uint gpio, uint32_t event);
-void impulse_counter4_callback(uint gpio, uint32_t event);
 bool repeating_timer_callback(struct repeating_timer *t);
 
 struct rpm {
@@ -31,3 +28,7 @@ struct imp_num {
 };
 
 void impulse_counter_init();
+
+extern rpm current_rpm;
+extern imp_num current_imp_num;
+extern struct repeating_timer rpm_timer;

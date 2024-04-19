@@ -1,3 +1,7 @@
+#include "hardware/pwm.h"
+#include "pico/stdlib.h"
+#include <cstdlib>
+
 // Определяем пины, к которым будем подключать шим-входы контроллера мотора
 #define PWM_PIN_1 4 // Подключаем к GP2 - 4 ножка микроконтроллера
 #define PWM_PIN_2 3 // Подключаем к GP3 - 5 ножка микроконтроллера
@@ -17,7 +21,7 @@
 // Заметим, что при таких настройках частота шима 125 000 000/6250 = 20 Кгц, что
 // необходимо для работы драйвера мотора
 
-void motors_init();
+void motor_init_all();
 
 void motor1_controller(int speed);
 void motor2_controller(int speed);

@@ -1,4 +1,7 @@
-/******************************************************************Обозначения*********************************************************************************/
+#include "hardware/pwm.h"
+#include "pico/stdlib.h"
+
+#define SERVO_COUNT 6
 
 // Определяем пины, к которым будем подключать шим-входы контроллера мотора
 #define SERVO_PWM_PIN_1 10 // Подключаем к GP2 - 4 ножка микроконтроллера
@@ -7,6 +10,10 @@
 #define SERVO_PWM_PIN_4 7
 #define SERVO_PWM_PIN_5 6
 #define SERVO_PWM_PIN_6 5
+
+#define STATE_CLOSED
+#define STATE_OPENED
+#define STATE_SEMI_CLOSED
 
 // Определяем предделитель тактовой частоты микроконтроллера (125Мгц) - один для
 // всех шим-каналов #define PWM_DIV 6250
@@ -23,14 +30,6 @@
 //           (250-1250)                        |
 //            |<------------------------------>|
 //                            20ms (10000)
-/***************************************************************Библиотечные
- * функции***************************************************************************/
 
-void servo_init();
-/*
-void motor1_controller(float speed );
-void motor2_controller(float speed );
-void motor3_controller(float speed );
-void motor4_controller(float speed );
-*/
-void servo(int number, int angle);
+void servo_init_all();
+void servo_set_angle(uint8_t number, int16_t angle);

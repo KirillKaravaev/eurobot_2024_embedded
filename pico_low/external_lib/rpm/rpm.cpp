@@ -1,18 +1,6 @@
-/**
- * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 #include "rpm.h"
-#include "pico/stdlib.h"
-#include <cstdio>
 
-extern rpm current_rpm;
-extern imp_num current_imp_num;
-extern struct repeating_timer timer;
-
-void impulse_counter_callback(uint gpio, uint32_t event) {
+void impulse_count_callback(uint gpio, uint32_t event) {
   if (gpio == IMP_CNT_PIN1)
     current_imp_num.imp_num1++;
   if (gpio == IMP_CNT_PIN2)
@@ -57,17 +45,19 @@ void impulse_counter_init() {
   // Задаем частоту, с которой будет вычисляться частота обращения
   // моторов(вызываться обработчик набранного числа импульсов). Она может
   // отличаться от частоты считывания, результаты заносятся в структуру rpm
-  add_repeating_timer_ms(CNT_DELAY_MS, &repeating_timer_callback, NULL, &timer);
+  add_repeating_timer_ms(CNT_DELAY_MS, &repeating_timer_callback, nullptr,
+                         &rpm_timer);
 
   // Активируем внешние прерывания на пинах по
-  gpio_set_irq_enabled_with_callback(IMP_CNT_PIN1, 0x04, 1,
-                                     &impulse_counter_callback);
-  gpio_set_irq_enabled_with_callback(IMP_CNT_PIN2, 0x04, 1,
-                                     &impulse_counter_callback);
-  gpio_set_irq_enabled_with_callback(IMP_CNT_PIN3, 0x04, 1,
-                                     &impulse_counter_callback);
-  gpio_set_irq_enabled_with_callback(IMP_CNT_PIN4, 0x04, 1,
-                                     &impulse_counter_callback);
+  uint32_t event_mask = GPIO_IRQ_EDGE_FALL;
+  gpio_set_irq_enabled_with_callback(IMP_CNT_PIN1, event_mask, true,
+                                     &impulse_count_callback);
+  gpio_set_irq_enabled_with_callback(IMP_CNT_PIN2, event_mask, true,
+                                     &impulse_count_callback);
+  gpio_set_irq_enabled_with_callback(IMP_CNT_PIN3, event_mask, true,
+                                     &impulse_count_callback);
+  gpio_set_irq_enabled_with_callback(IMP_CNT_PIN4, event_mask, true,
+                                     &impulse_count_callback);
 
   // Обнуляем значения структуры rpm
 }
