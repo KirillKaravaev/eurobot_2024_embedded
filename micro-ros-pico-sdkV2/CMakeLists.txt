@@ -21,12 +21,10 @@ add_executable(main
 target_link_libraries(main
     pico_stdlib
     microros
-    kinematics
     pico_uart_transports
-    motors
-    imu
     stepper
     servo
+    tft
 )
 
 target_include_directories(main PUBLIC

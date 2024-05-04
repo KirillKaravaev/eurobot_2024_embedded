@@ -9,39 +9,27 @@
 
 #include "pico/stdlib.h"
 #include "pico_uart_transports.c"  //только так (расширене не .h ,а .c) работает передача данных по юарт. 
-#include "motors.h"
-#include "kinematics.h"
-#include "imu.h"
 #include "servo.h"
 #include "stepper.h"
+#include "tft.h"
 
 
 #include <geometry_msgs/msg/twist.h>
 #include <geometry_msgs/msg/vector3.h>
-//#include <sensor_msgs/msg/imu.h>
+#include <sensor_msgs/msg/imu.h>
+#include <std_msgs/msg/char.h>
 
 const uint LED_PIN = 25;
 int cnt = 1;
 
-rcl_publisher_t publisher;
-geometry_msgs__msg__Twist pub_twist_msg;
-
-//rcl_subscription_t subscriber;
-
-//rcl_subscription_t twist_subscriber;
-//geometry_msgs__msg__Twist twist_msg;
+rcl_subscription_t tft_subscriber;
+std_msgs__msg__Char tft_msg;
 
 rcl_subscription_t servo_subscriber;
 geometry_msgs__msg__Vector3 servo_msg;
 
 rcl_subscription_t stepper_subscriber;
 geometry_msgs__msg__Vector3 stepper_msg;
-
-//std_msgs__msg__Int32 msg;
-//std_msgs__msg__Int32 sub_msg;
-//std_msgs__msg__String sub_msg;
-
-
 
 
 //void stepper_init();
@@ -83,6 +71,13 @@ void servo_subscriber_callback(const void * msgin)
     blink();
 }
 
+void tft_subscriber_callback(const void * msgin)
+{
+    const std_msgs__msg__Char * msg = (const std_msgs__msg__Char *)msgin;
+    Test0( msg->data );
+    blink();
+}
+
 void stepper_subscriber_callback(const void * msgin)
 {
     const geometry_msgs__msg__Vector3 * msg = (const geometry_msgs__msg__Vector3 *)msgin;
@@ -104,6 +99,7 @@ int main()
 
     servo_init();
     stepper_init();
+    tft_init();
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
 
@@ -152,12 +148,17 @@ int main()
         ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Vector3),
         "stepper_topic");
 
-    
-    rclc_publisher_init_default(
-        &publisher,
+    rclc_subscription_init_default(
+        &tft_subscriber,
         &node,
-        ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
-        "pico_publisher");
+        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Char),
+        "screen_topic");
+
+    //rclc_publisher_init_default(
+    //    &publisher,
+    //    &node,
+    //    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
+    //    "pico_publisher");
 
     rclc_timer_init_default(
         &timer,
@@ -167,12 +168,13 @@ int main()
 
  //    std_msgs__msg__String__init(&sub_msg);
 
-    rclc_executor_init(&executor, &support.context, 3, &allocator);
+    rclc_executor_init(&executor, &support.context, 4, &allocator);
     rclc_executor_add_timer(&executor, &timer);
 //    rclc_executor_add_subscription(&executor, &subscriber, &sub_msg, &subscriber_callback, ON_NEW_DATA);
 
     rclc_executor_add_subscription(&executor, &servo_subscriber, &servo_msg, &servo_subscriber_callback, ON_NEW_DATA);
     rclc_executor_add_subscription(&executor, &stepper_subscriber, &stepper_msg, &stepper_subscriber_callback, ON_NEW_DATA);
+    rclc_executor_add_subscription(&executor, &tft_subscriber, &tft_msg, &tft_subscriber_callback, ON_NEW_DATA);
  //   gpio_put(LED_PIN, 1);
 
 //    msg.data = 0;

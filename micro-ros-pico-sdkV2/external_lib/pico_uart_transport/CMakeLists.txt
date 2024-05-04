@@ -1,5 +1,5 @@
 add_library(pico_uart_transports INTERFACE)
-target_sources(kinematics INTERFACE ${CMAKE_CURRENT_LIST_DIR}/pico_uart_transports.c)
+target_sources(pico_uart_transports INTERFACE ${CMAKE_CURRENT_LIST_DIR}/pico_uart_transports.c)
 
 target_include_directories(pico_uart_transports INTERFACE ${CMAKE_CURRENT_LIST_DIR})
 

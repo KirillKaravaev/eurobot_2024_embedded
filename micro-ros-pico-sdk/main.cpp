@@ -26,8 +26,8 @@ struct repeating_timer timer;
 const uint LED_PIN = 25;
 int cnt = 1;
 
-rcl_publisher_t publisher;
-geometry_msgs__msg__Twist pub_twist_msg;
+//rcl_publisher_t publisher;
+//geometry_msgs__msg__Twist pub_twist_msg;
 
 rcl_publisher_t rpm_publisher;
 geometry_msgs__msg__Quaternion rpm_msg;
@@ -65,9 +65,9 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 {
 	
 	
-	pub_twist_msg.linear.x = cmd_vel.linear_x;
-	pub_twist_msg.linear.y = cmd_vel.linear_y;
-	pub_twist_msg.angular.z = cmd_vel.angular_z;
+//	pub_twist_msg.linear.x = cmd_vel.linear_x;
+//	pub_twist_msg.linear.y = cmd_vel.linear_y;
+//	pub_twist_msg.angular.z = cmd_vel.angular_z;
 	
 	
 //	rcl_ret_t ret = rcl_publish(&publisher, &pub_twist_msg, NULL);
@@ -170,11 +170,11 @@ int main()
 
 
     
-    rclc_publisher_init_default(
-        &publisher,
-        &node,
-        ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
-        "pico_publisher");
+    //rclc_publisher_init_default(
+    //    &publisher,
+    //    &node,
+    //    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
+    //    "pico_publisher");
 
     rclc_publisher_init_default(
         &rpm_publisher,
