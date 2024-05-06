@@ -6,6 +6,7 @@
 #define MOTOR_PWM_PIN_3 18  // Подключаем к GP4 - 6 ножка микроконтроллера
 #define MOTOR_PWM_PIN_4 0   // Подключаем к GP5 - 7 ножка микроконтроллера
 
+
 #define DIR_PIN_1 19
 #define DIR_PIN_2 1
 #define DIR_PIN_3 16

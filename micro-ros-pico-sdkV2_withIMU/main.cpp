@@ -12,7 +12,7 @@
 #include "imu.h"
 #include "servo.h"
 #include "stepper.h"
-#include "tft.h"
+//#include "tft.h"
 
 
 #include <geometry_msgs/msg/twist.h>
@@ -26,8 +26,8 @@ int cnt = 1;
 rcl_publisher_t imu_publisher;
 sensor_msgs__msg__Imu imu_msg;
 
-rcl_subscription_t tft_subscriber;
-std_msgs__msg__Char tft_msg;
+//rcl_subscription_t tft_subscriber;
+//std_msgs__msg__Char tft_msg;
 
 rcl_subscription_t servo_subscriber;
 geometry_msgs__msg__Vector3 servo_msg;
@@ -73,12 +73,12 @@ void servo_subscriber_callback(const void * msgin)
     blink();
 }
 
-void tft_subscriber_callback(const void * msgin)
-{
-    const std_msgs__msg__Char * msg = (const std_msgs__msg__Char *)msgin;
-    Test0( msg->data );
-    blink();
-}
+//void tft_subscriber_callback(const void * msgin)
+//{
+//    const std_msgs__msg__Char * msg = (const std_msgs__msg__Char *)msgin;
+//    Test0( msg->data );
+//    blink();
+//}
 
 void stepper_subscriber_callback(const void * msgin)
 {
@@ -102,7 +102,7 @@ int main()
     servo_init();
     stepper_init();
     imu.imu_init();
-    tft_init();
+//    tft_init();
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
 
@@ -151,12 +151,12 @@ int main()
         ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Vector3),
         "stepper_topic");
 
-    rclc_subscription_init_default(
-        &tft_subscriber,
-        &node,
-        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Char),
-        "screen_topic");
-    
+    //rclc_subscription_init_default(
+    //    &tft_subscriber,
+    //    &node,
+    //    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Char),
+    //    "screen_topic");
+    //
     rclc_publisher_init_default(
         &imu_publisher,
         &node,
@@ -171,13 +171,13 @@ int main()
 
  //    std_msgs__msg__String__init(&sub_msg);
 
-    rclc_executor_init(&executor, &support.context, 4, &allocator);
+    rclc_executor_init(&executor, &support.context, 3, &allocator);
     rclc_executor_add_timer(&executor, &timer);
 //    rclc_executor_add_subscription(&executor, &subscriber, &sub_msg, &subscriber_callback, ON_NEW_DATA);
 
     rclc_executor_add_subscription(&executor, &servo_subscriber, &servo_msg, &servo_subscriber_callback, ON_NEW_DATA);
     rclc_executor_add_subscription(&executor, &stepper_subscriber, &stepper_msg, &stepper_subscriber_callback, ON_NEW_DATA);
-    rclc_executor_add_subscription(&executor, &tft_subscriber, &tft_msg, &tft_subscriber_callback, ON_NEW_DATA);
+//    rclc_executor_add_subscription(&executor, &tft_subscriber, &tft_msg, &tft_subscriber_callback, ON_NEW_DATA);
  //   gpio_put(LED_PIN, 1);
 
 //    msg.data = 0;

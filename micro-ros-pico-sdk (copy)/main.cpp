@@ -11,8 +11,8 @@
 #include "pico/stdlib.h"
 #include "pico_uart_transports.c"  //только так (расширене не .h ,а .c) работает передача данных по юарт.
 #include "rpm.h"
-// #include "servo.h"
-// #include "imu.h"
+#include "servo.h"
+#include "imu.h"
 
 #include <geometry_msgs/msg/quaternion.h>
 #include <geometry_msgs/msg/twist.h>
@@ -26,8 +26,8 @@ struct repeating_timer timer;
 const uint LED_PIN = 25;
 int cnt = 1;
 
-// rcl_publisher_t imu_publisher;
-// sensor_msgs__msg__Imu imu_msg;
+rcl_publisher_t imu_publisher;
+sensor_msgs__msg__Imu imu_msg;
 
 rcl_publisher_t rpm_publisher;
 geometry_msgs__msg__Quaternion rpm_msg;
@@ -38,8 +38,8 @@ geometry_msgs__msg__Twist twist_msg;
 rcl_subscription_t servo_subscriber;
 geometry_msgs__msg__Vector3 servo_msg;
 
-// IMU imu;
-// IMU::data imu_dat;
+ IMU imu;
+ IMU::data imu_dat;
 
 Kinematics kinematics(
     Kinematics::LINO_BASE,
@@ -68,20 +68,20 @@ void blink() {
 }
 
 void timer_callback(rcl_timer_t *timer, int64_t last_call_time) {
-    rpm_msg.w = current_rpm.rpm1;
-    rpm_msg.x = current_rpm.rpm2;
-    rpm_msg.y = current_rpm.rpm3;
-    rpm_msg.z = current_rpm.rpm4;
+//    rpm_msg.w = current_rpm.rpm1;
+//    rpm_msg.x = current_rpm.rpm2;
+//    rpm_msg.y = current_rpm.rpm3;
+//    rpm_msg.z = current_rpm.rpm4;
 
-    rcl_ret_t ret = rcl_publish(&rpm_publisher, &rpm_msg, NULL);
+//    rcl_ret_t ret = rcl_publish(&rpm_publisher, &rpm_msg, NULL);
 
-    //    imu_dat = imu.get_data();
+    imu_dat = imu.get_data();
 
-    //    imu_msg.angular_velocity.z = imu_dat.ang_z;  //Отправляется не угловая скорость, а угол!!!!!!
-    //    imu_msg.linear_acceleration.x = imu_dat.lin_accel_x;
-    //    imu_msg.linear_acceleration.y = imu_dat.lin_accel_y;
+    imu_msg.angular_velocity.z = imu_dat.ang_z;  //Отправляется не угловая скорость, а угол!!!!!!
+    imu_msg.linear_acceleration.x = imu_dat.lin_accel_x;
+    imu_msg.linear_acceleration.y = imu_dat.lin_accel_y;
 
-    //    rcl_ret_t ret = rcl_publish(&imu_publisher, &imu_msg, NULL);
+    rcl_ret_t ret = rcl_publish(&imu_publisher, &imu_msg, NULL);
 }
 
 void twist_subscriber_callback(const void *msgin) {
@@ -110,12 +110,12 @@ void twist_subscriber_callback(const void *msgin) {
     blink();
 }
 
-// void servo_subscriber_callback(const void * msgin)
-//{
-//     const geometry_msgs__msg__Vector3 * msg = (const geometry_msgs__msg__Vector3 *)msgin;
-//     servo(msg->x, msg->y);
-//     blink();
-// }
+void servo_subscriber_callback(const void * msgin)
+{
+     const geometry_msgs__msg__Vector3 * msg = (const geometry_msgs__msg__Vector3 *)msgin;
+     servo(msg->x, msg->y);
+     blink();
+}
 
 int main() {
     rmw_uros_set_custom_transport(
@@ -127,11 +127,13 @@ int main() {
         pico_serial_transport_read);
 
     motors_init();
-    //    servo_init();
-    //    imu.imu_init();
+    servo_init();
+    imu.imu_init();
     impulse_counter_init();
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
+
+
 
     rcl_timer_t timer;
     rcl_node_t node;
@@ -168,11 +170,11 @@ int main() {
         ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Vector3),
         "servo_topic");
 
-    // rclc_publisher_init_default(
-    //     &imu_publisher,
-    //     &node,
-    //     ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
-    //     "imu_topic");
+    rclc_publisher_init_default(
+        &imu_publisher,
+        &node,
+        ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
+        "imu_topic");
 
     rclc_publisher_init_default(
         &rpm_publisher,
@@ -183,17 +185,17 @@ int main() {
     rclc_timer_init_default(
         &timer,
         &support,
-        RCL_MS_TO_NS(1000),
+        RCL_MS_TO_NS(200),
         timer_callback);
 
     //    std_msgs__msg__String__init(&sub_msg);
 
     rclc_executor_init(&executor, &support.context, 3, &allocator);
     rclc_executor_add_timer(&executor, &timer);
-    //    rclc_executor_add_subscription(&executor, &subscriber, &sub_msg, &subscriber_callback, ON_NEW_DATA);
+   
 
     rclc_executor_add_subscription(&executor, &twist_subscriber, &twist_msg, &twist_subscriber_callback, ON_NEW_DATA);
-    //    rclc_executor_add_subscription(&executor, &servo_subscriber, &servo_msg, &servo_subscriber_callback, ON_NEW_DATA);
+    rclc_executor_add_subscription(&executor, &servo_subscriber, &servo_msg, &servo_subscriber_callback, ON_NEW_DATA);
     //   gpio_put(LED_PIN, 1);
 
     //    msg.data = 0;

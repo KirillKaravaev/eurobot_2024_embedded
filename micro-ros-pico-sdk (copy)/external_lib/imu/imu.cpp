@@ -5,6 +5,8 @@
 #include "MPU6050.h"
 #include "imu.h"
 
+//extern const uint LED_PIN = 25;
+
 MPU6050 mpu;
 
 bool dmpReady = false;  // set true if DMP init was successful
@@ -64,8 +66,8 @@ void IMU::imu_init(){
 
 
 
-     mpu.CalibrateAccel(6);
-     mpu.CalibrateGyro(6);	
+    mpu.CalibrateAccel(6);
+    mpu.CalibrateGyro(6);	
 	
     if (devStatus == 0) 
     {
@@ -77,7 +79,8 @@ void IMU::imu_init(){
     else 
     {                                          // ERROR!        1 = initial memory load failed         2 = DMP configuration updates failed        (if it's going to break, usually the code will be 1)
 //        printf("DMP Initialization failed (code %d)", devStatus);
-//        sleep_ms(2000);
+        sleep_ms(2000);
+//    gpio_put(LED_PIN, 0);
     }
     yaw = 0.0;
     pitch = 0.0;
