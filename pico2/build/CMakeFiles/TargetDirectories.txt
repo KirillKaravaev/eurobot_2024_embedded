@@ -1,4 +1,4 @@
-/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles/main.dir
+/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles/pico2.dir
 /home/kirill/Projects/Pico/test/pico2/build/CMakeFiles/ELF2UF2Build.dir
 /home/kirill/Projects/Pico/test/pico2/build/CMakeFiles/edit_cache.dir
 /home/kirill/Projects/Pico/test/pico2/build/CMakeFiles/rebuild_cache.dir

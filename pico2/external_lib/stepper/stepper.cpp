@@ -8,7 +8,7 @@
 /*https://www.webwork.co.uk/2023/06/raspberry-pi-pico-as-switching_21.html */
 
 void stepper(int number, int direction, int angle ){
-    if(number == 1){
+    if ((number == 1) && gpio_get(STEPPER_OVERHEAT_PIN_1) && gpio_get(STEPPER_OVERHEAT_PIN_2)) { //Сразу проверяем перегрев драйверов.
         gpio_put(STEPPER_ENABLE_PIN_1, 0);  // Включаем работу драйвера для поворота кассетницы
         if (direction == 1){
             gpio_put(STEPPER_DIR_PIN_1, 1); 
@@ -21,8 +21,8 @@ void stepper(int number, int direction, int angle ){
         pwm_set_gpio_level(STEPPER_PWM_PIN_1, 0);
         gpio_put(STEPPER_ENABLE_PIN_1, 1);  // Отключаем работу драйвера после окончания поворота (чтобы минимизировать нагрев драйвера)
 
-    }
-    else{                                      //Вторая группа моторов должна оставаться включенной, чтобы обеспечивать удержание ромашки в поднятом состоянии
+    } else if ((number == 2) && gpio_get(STEPPER_OVERHEAT_PIN_3) && gpio_get(STEPPER_OVERHEAT_PIN_4)) {  // Вторая группа моторов должна оставаться включенной, чтобы обеспечивать удержание ромашки в поднятом состоянии
+        gpio_put(STEPPER_ENABLE_PIN_2, 0); // Включаем работу драйвера для подъема ромашки(он и так включен, но после перегрева отключается)
         if (direction == 1){
             gpio_put(STEPPER_DIR_PIN_2, 1); 
         }
@@ -35,21 +35,26 @@ void stepper(int number, int direction, int angle ){
 }
 
 int stepper_overheat(){
-    if ( (!gpio_get(STEPPER_OVERHEAT_PIN_1)) || (!gpio_get(STEPPER_OVERHEAT_PIN_2))){
+    if (((!gpio_get(STEPPER_OVERHEAT_PIN_1)) || (!gpio_get(STEPPER_OVERHEAT_PIN_2))) && ((!gpio_get(STEPPER_OVERHEAT_PIN_3)) || (!gpio_get(STEPPER_OVERHEAT_PIN_4)))) {
+        gpio_put(STEPPER_ENABLE_PIN_1, 1);  // Отключаем работу драйверов при перегреве (он отключается автоматически, но на всякий случай)
+        gpio_put(STEPPER_ENABLE_PIN_2, 1);  // Отключаем работу драйверов при перегреве (он отключается автоматически, но на всякий случай)
+        return 3;
+    }
+    else if ( (!gpio_get(STEPPER_OVERHEAT_PIN_1)) || (!gpio_get(STEPPER_OVERHEAT_PIN_2))){
         gpio_put(STEPPER_ENABLE_PIN_1, 1);  // Отключаем работу драйверов при перегреве (он отключается автоматически, но на всякий случай)
         return 1;
     }
     else if ( (!gpio_get(STEPPER_OVERHEAT_PIN_3)) || (!gpio_get(STEPPER_OVERHEAT_PIN_4))) {
         gpio_put(STEPPER_ENABLE_PIN_2, 1);  // Отключаем работу драйверов при перегреве (он отключается автоматически, но на всякий случай)
         return 2;
-    }
-    else{
-        gpio_put(STEPPER_ENABLE_PIN_1, 0);
-        gpio_put(STEPPER_ENABLE_PIN_2, 0);
+    } 
+    
+    else {
+//        gpio_put(STEPPER_ENABLE_PIN_1, 0);
+//        gpio_put(STEPPER_ENABLE_PIN_2, 0);
         return 0;
     }
-}
-
+    }
 
 //Функция инициализации ШИМ-выводов для управления скоростью и пинов для управления направлением вращения
 void stepper_pwm_init(){
@@ -91,7 +96,10 @@ void stepper_direction_init(){
 
     // Выделяем пины для управления включением-выключением драйверов моторов ромашки
     gpio_init(STEPPER_ENABLE_PIN_1);
+    gpio_init(STEPPER_ENABLE_PIN_2);
+
     gpio_set_dir(STEPPER_ENABLE_PIN_1, GPIO_OUT);
+    gpio_set_dir(STEPPER_ENABLE_PIN_2, GPIO_OUT);
 }
 
 void stepper_overheat_init() {
@@ -116,5 +124,6 @@ void stepper_init(){
 
     // Изначально кассетница отключена
     gpio_put(STEPPER_ENABLE_PIN_1, 1);
+    gpio_put(STEPPER_ENABLE_PIN_2, 1);
 }
 

@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named pico2
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+pico2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico2
+.PHONY : pico2
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+pico2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/build
+.PHONY : pico2/fast
 
 #=============================================================================
 # Target rules for targets named ELF2UF2Build
@@ -212,7 +212,7 @@ external_lib/pico_uart_transport/pico_uart_transports.obj: external_lib/pico_uar
 
 # target to build an object file
 external_lib/pico_uart_transport/pico_uart_transports.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/pico_uart_transport/pico_uart_transports.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/pico_uart_transport/pico_uart_transports.c.obj
 .PHONY : external_lib/pico_uart_transport/pico_uart_transports.c.obj
 
 external_lib/pico_uart_transport/pico_uart_transports.i: external_lib/pico_uart_transport/pico_uart_transports.c.i
@@ -220,7 +220,7 @@ external_lib/pico_uart_transport/pico_uart_transports.i: external_lib/pico_uart_
 
 # target to preprocess a source file
 external_lib/pico_uart_transport/pico_uart_transports.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/pico_uart_transport/pico_uart_transports.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/pico_uart_transport/pico_uart_transports.c.i
 .PHONY : external_lib/pico_uart_transport/pico_uart_transports.c.i
 
 external_lib/pico_uart_transport/pico_uart_transports.s: external_lib/pico_uart_transport/pico_uart_transports.c.s
@@ -228,7 +228,7 @@ external_lib/pico_uart_transport/pico_uart_transports.s: external_lib/pico_uart_
 
 # target to generate assembly for a file
 external_lib/pico_uart_transport/pico_uart_transports.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/pico_uart_transport/pico_uart_transports.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/pico_uart_transport/pico_uart_transports.c.s
 .PHONY : external_lib/pico_uart_transport/pico_uart_transports.c.s
 
 external_lib/stepper/stepper.obj: external_lib/stepper/stepper.cpp.obj
@@ -236,7 +236,7 @@ external_lib/stepper/stepper.obj: external_lib/stepper/stepper.cpp.obj
 
 # target to build an object file
 external_lib/stepper/stepper.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/stepper/stepper.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.obj
 .PHONY : external_lib/stepper/stepper.cpp.obj
 
 external_lib/stepper/stepper.i: external_lib/stepper/stepper.cpp.i
@@ -244,7 +244,7 @@ external_lib/stepper/stepper.i: external_lib/stepper/stepper.cpp.i
 
 # target to preprocess a source file
 external_lib/stepper/stepper.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/stepper/stepper.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.i
 .PHONY : external_lib/stepper/stepper.cpp.i
 
 external_lib/stepper/stepper.s: external_lib/stepper/stepper.cpp.s
@@ -252,7 +252,7 @@ external_lib/stepper/stepper.s: external_lib/stepper/stepper.cpp.s
 
 # target to generate assembly for a file
 external_lib/stepper/stepper.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/stepper/stepper.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.s
 .PHONY : external_lib/stepper/stepper.cpp.s
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj
@@ -260,7 +260,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT.obj: external_lib/tft/ST7735_TFT_lib/
 
 # target to build an object file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i
@@ -268,7 +268,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT.i: external_lib/tft/ST7735_TFT_lib/ST
 
 # target to preprocess a source file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s
@@ -276,7 +276,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT.s: external_lib/tft/ST7735_TFT_lib/ST
 
 # target to generate assembly for a file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj
@@ -284,7 +284,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.obj: external_lib/tft/ST7
 
 # target to build an object file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i
@@ -292,7 +292,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.i: external_lib/tft/ST773
 
 # target to preprocess a source file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s
@@ -300,7 +300,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.s: external_lib/tft/ST773
 
 # target to generate assembly for a file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj
@@ -308,7 +308,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.obj: external_lib/tft/ST7735_TFT
 
 # target to build an object file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i
@@ -316,7 +316,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.i: external_lib/tft/ST7735_TFT_l
 
 # target to preprocess a source file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s
@@ -324,7 +324,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.s: external_lib/tft/ST7735_TFT_l
 
 # target to generate assembly for a file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj
@@ -332,7 +332,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.obj: external_lib/tft/ST7735_TF
 
 # target to build an object file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i
@@ -340,7 +340,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.i: external_lib/tft/ST7735_TFT_
 
 # target to preprocess a source file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s
@@ -348,7 +348,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.s: external_lib/tft/ST7735_TFT_
 
 # target to generate assembly for a file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj
@@ -356,7 +356,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.obj: external_lib/tft/ST7735
 
 # target to build an object file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i
@@ -364,7 +364,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.i: external_lib/tft/ST7735_T
 
 # target to preprocess a source file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i
 
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s
@@ -372,7 +372,7 @@ external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.s: external_lib/tft/ST7735_T
 
 # target to generate assembly for a file
 external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s
 .PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s
 
 external_lib/tft/tft.obj: external_lib/tft/tft.cpp.obj
@@ -380,7 +380,7 @@ external_lib/tft/tft.obj: external_lib/tft/tft.cpp.obj
 
 # target to build an object file
 external_lib/tft/tft.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/tft.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj
 .PHONY : external_lib/tft/tft.cpp.obj
 
 external_lib/tft/tft.i: external_lib/tft/tft.cpp.i
@@ -388,7 +388,7 @@ external_lib/tft/tft.i: external_lib/tft/tft.cpp.i
 
 # target to preprocess a source file
 external_lib/tft/tft.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/tft.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.i
 .PHONY : external_lib/tft/tft.cpp.i
 
 external_lib/tft/tft.s: external_lib/tft/tft.cpp.s
@@ -396,7 +396,7 @@ external_lib/tft/tft.s: external_lib/tft/tft.cpp.s
 
 # target to generate assembly for a file
 external_lib/tft/tft.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/external_lib/tft/tft.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.s
 .PHONY : external_lib/tft/tft.cpp.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
@@ -404,7 +404,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/kir
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
@@ -412,7 +412,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/kiril
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
@@ -420,7 +420,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/kiril
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
@@ -428,7 +428,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/kirill/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
@@ -436,7 +436,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/kirill/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
@@ -444,7 +444,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/kirill/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
@@ -452,7 +452,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/kirill/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
@@ -460,7 +460,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/kirill/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
@@ -468,7 +468,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/kirill/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
@@ -476,7 +476,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/kiri
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
@@ -484,7 +484,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/kirill
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
@@ -492,7 +492,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/kirill
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
@@ -500,7 +500,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/kirill/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
@@ -508,7 +508,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/kirill/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
@@ -516,7 +516,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/kirill/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
@@ -524,7 +524,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/kiril
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
@@ -532,7 +532,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/kirill/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
@@ -540,7 +540,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/kirill/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
@@ -548,7 +548,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/kirill/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
@@ -556,7 +556,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/kirill/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
@@ -564,7 +564,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/kirill/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
@@ -572,7 +572,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/k
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
@@ -580,7 +580,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/kir
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
@@ -588,7 +588,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/kir
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
@@ -596,7 +596,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/kirill/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
@@ -604,7 +604,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/kirill/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
@@ -612,7 +612,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/kirill/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
@@ -620,7 +620,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/k
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
@@ -628,7 +628,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/kir
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
@@ -636,7 +636,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/kir
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
@@ -644,7 +644,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/k
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
@@ -652,7 +652,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/kir
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
@@ -660,7 +660,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/kir
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
@@ -668,7 +668,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/kir
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
@@ -676,7 +676,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/kiril
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
@@ -684,7 +684,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/kiril
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
@@ -692,7 +692,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/kirill/pico
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
@@ -700,7 +700,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/kirill/pico/p
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
@@ -708,7 +708,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/kirill/pico/p
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
@@ -716,7 +716,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/kirill/pico/pico
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
@@ -724,7 +724,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/kirill/pico/pico-s
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
@@ -732,7 +732,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/kirill/pico/pico-s
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
@@ -740,7 +740,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/kirill/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
@@ -748,7 +748,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/kirill/pic
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
@@ -756,7 +756,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/kirill/pic
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
@@ -764,7 +764,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
@@ -772,7 +772,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
@@ -780,7 +780,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
@@ -788,7 +788,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
@@ -796,7 +796,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
@@ -804,7 +804,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
@@ -812,7 +812,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.obj: home/kirill/pico/pico-sdk/li
 
 # target to build an object file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
@@ -820,7 +820,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/kirill/pico/pico-sdk/lib/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
@@ -828,7 +828,7 @@ home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/kirill/pico/pico-sdk/lib/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
@@ -836,7 +836,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/kirill
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -844,7 +844,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/kirill/p
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -852,7 +852,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/kirill/p
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.obj: home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -860,7 +860,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.obj: home/kirill/pico/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -868,7 +868,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/kirill/pico/pic
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -876,7 +876,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/kirill/pico/pic
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -884,7 +884,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/kirill/pico/pico-
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.i: home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -892,7 +892,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.i: home/kirill/pico/pico-sd
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.s: home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -900,7 +900,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.s: home/kirill/pico/pico-sd
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/sem.obj: home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -908,7 +908,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/sem.obj: home/kirill/pico/pico-sd
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/sem.i: home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -916,7 +916,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/sem.i: home/kirill/pico/pico-sdk/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_sync/sem.s: home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -924,7 +924,7 @@ home/kirill/pico/pico-sdk/src/common/pico_sync/sem.s: home/kirill/pico/pico-sdk/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_time/time.obj: home/kirill/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -932,7 +932,7 @@ home/kirill/pico/pico-sdk/src/common/pico_time/time.obj: home/kirill/pico/pico-s
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_time/time.i: home/kirill/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -940,7 +940,7 @@ home/kirill/pico/pico-sdk/src/common/pico_time/time.i: home/kirill/pico/pico-sdk
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_time/time.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_time/time.s: home/kirill/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -948,7 +948,7 @@ home/kirill/pico/pico-sdk/src/common/pico_time/time.s: home/kirill/pico/pico-sdk
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_time/time.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -956,7 +956,7 @@ home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: home/kirill/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -964,7 +964,7 @@ home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/kirill/pic
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -972,7 +972,7 @@ home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/kirill/pic
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_util/datetime.obj: home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -980,7 +980,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/datetime.obj: home/kirill/pico/pi
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_util/datetime.i: home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -988,7 +988,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/datetime.i: home/kirill/pico/pico
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_util/datetime.s: home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -996,7 +996,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/datetime.s: home/kirill/pico/pico
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_util/pheap.obj: home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -1004,7 +1004,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/pheap.obj: home/kirill/pico/pico-
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_util/pheap.i: home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -1012,7 +1012,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/pheap.i: home/kirill/pico/pico-sd
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_util/pheap.s: home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -1020,7 +1020,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/pheap.s: home/kirill/pico/pico-sd
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 home/kirill/pico/pico-sdk/src/common/pico_util/queue.obj: home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -1028,7 +1028,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/queue.obj: home/kirill/pico/pico-
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 home/kirill/pico/pico-sdk/src/common/pico_util/queue.i: home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -1036,7 +1036,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/queue.i: home/kirill/pico/pico-sd
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 home/kirill/pico/pico-sdk/src/common/pico_util/queue.s: home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -1044,7 +1044,7 @@ home/kirill/pico/pico-sdk/src/common/pico_util/queue.s: home/kirill/pico/pico-sd
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -1052,7 +1052,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/kirill/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -1060,7 +1060,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: home/kirill/pic
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -1068,7 +1068,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: home/kirill/pic
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -1076,7 +1076,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/kirill
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -1084,7 +1084,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/kirill/p
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -1092,7 +1092,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/kirill/p
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -1100,7 +1100,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/kiri
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
@@ -1108,7 +1108,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/kirill/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
@@ -1116,7 +1116,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/kirill/pic
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
@@ -1124,7 +1124,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/kirill/pic
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -1132,7 +1132,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/kirill/pic
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -1140,7 +1140,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/kirill/pico/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -1148,7 +1148,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/kirill/pico/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -1156,7 +1156,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/kirill/pico/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -1164,7 +1164,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/kirill/pico/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -1172,7 +1172,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/kirill/pico/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -1180,7 +1180,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: hom
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -1188,7 +1188,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/kirill/pico/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -1196,7 +1196,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/kirill/pico/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -1204,7 +1204,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/kirill/pico/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
@@ -1212,7 +1212,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: home/kirill/pico/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
@@ -1220,7 +1220,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/kirill/pico/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
@@ -1228,7 +1228,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/kirill/pico/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -1236,7 +1236,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/kirill/pic
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1244,7 +1244,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/kirill/pico/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1252,7 +1252,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/kirill/pico/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -1260,7 +1260,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/kirill/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1268,7 +1268,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/kirill/pic
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1276,7 +1276,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/kirill/pic
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -1284,7 +1284,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/kirill/pic
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -1292,7 +1292,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/kirill/pico/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1300,7 +1300,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/kirill/pico/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -1308,7 +1308,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/kirill/pic
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1316,7 +1316,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/kirill/pico/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1324,7 +1324,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/kirill/pico/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1332,7 +1332,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/ki
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1340,7 +1340,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/kiri
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1348,7 +1348,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/kiri
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1356,7 +1356,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/kirill/pic
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1364,7 +1364,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/kirill/pico/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1372,7 +1372,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/kirill/pico/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -1380,7 +1380,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/ki
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -1388,7 +1388,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/kirill/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1396,7 +1396,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/kirill/pic
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1404,7 +1404,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/kirill/pic
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
@@ -1412,7 +1412,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/kirill/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -1420,7 +1420,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: home/kiri
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -1428,7 +1428,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: home/k
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
@@ -1436,7 +1436,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: home/kir
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
@@ -1444,7 +1444,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: home/kir
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -1452,7 +1452,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/kiril
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1460,7 +1460,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/kirill/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1468,7 +1468,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/kirill/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -1476,7 +1476,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: hom
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
@@ -1484,7 +1484,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
@@ -1492,7 +1492,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
@@ -1500,7 +1500,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -1508,7 +1508,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: home/kirill
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -1516,7 +1516,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: home/kir
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
@@ -1524,7 +1524,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: home/kiril
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
@@ -1532,7 +1532,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: home/kiril
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -1540,7 +1540,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/kirill/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1548,7 +1548,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/kirill/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1556,7 +1556,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/kirill/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -1564,7 +1564,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: home/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -1572,7 +1572,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -1580,7 +1580,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: home/kiril
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -1588,7 +1588,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: home/kirill/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -1596,7 +1596,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: home/kirill/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -1604,7 +1604,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/ki
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -1612,7 +1612,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: home/kirill
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -1620,7 +1620,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: home/kirill/p
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -1628,7 +1628,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: home/kirill/p
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -1636,7 +1636,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/kirill/pic
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1644,7 +1644,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/kirill/pico/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1652,7 +1652,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/kirill/pico/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -1660,7 +1660,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/kirill/p
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1668,7 +1668,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/kirill/pic
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1676,7 +1676,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/kirill/pic
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -1684,7 +1684,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: hom
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -1692,7 +1692,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: home/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -1700,7 +1700,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: home/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1708,7 +1708,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: home/kiril
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -1716,7 +1716,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: home
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -1724,7 +1724,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: home/k
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -1732,7 +1732,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: home/k
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1740,7 +1740,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/kirill/pico/
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1748,7 +1748,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/kirill/pico/pi
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1756,7 +1756,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/kirill/pico/pi
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
@@ -1764,7 +1764,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: hom
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
@@ -1772,7 +1772,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
@@ -1780,7 +1780,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
@@ -1788,7 +1788,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/kiri
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
@@ -1796,7 +1796,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/kirill
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
@@ -1804,7 +1804,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/kirill
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
@@ -1812,7 +1812,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.ob
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
@@ -1820,7 +1820,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i:
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
@@ -1828,7 +1828,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s:
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1836,7 +1836,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/kirill/pic
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1844,7 +1844,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/kirill/pico/
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1852,7 +1852,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/kirill/pico/
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
@@ -1860,7 +1860,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/kiri
 
 # target to build an object file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
@@ -1868,7 +1868,7 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/kirill
 
 # target to preprocess a source file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
 home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
@@ -1876,32 +1876,32 @@ home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/kirill
 
 # target to generate assembly for a file
 home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+pico2.obj: pico2.cpp.obj
+.PHONY : pico2.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+pico2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/pico2.cpp.obj
+.PHONY : pico2.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
+pico2.i: pico2.cpp.i
+.PHONY : pico2.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+pico2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/pico2.cpp.i
+.PHONY : pico2.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+pico2.s: pico2.cpp.s
+.PHONY : pico2.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+pico2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/pico2.cpp.s
+.PHONY : pico2.cpp.s
 
 # Help Target
 help:
@@ -1917,7 +1917,7 @@ help:
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... bs2_default"
-	@echo "... main"
+	@echo "... pico2"
 	@echo "... external_lib/pico_uart_transport/pico_uart_transports.obj"
 	@echo "... external_lib/pico_uart_transport/pico_uart_transports.i"
 	@echo "... external_lib/pico_uart_transport/pico_uart_transports.s"
@@ -2127,9 +2127,9 @@ help:
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
-	@echo "... main.obj"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... pico2.obj"
+	@echo "... pico2.i"
+	@echo "... pico2.s"
 .PHONY : help
 
 
