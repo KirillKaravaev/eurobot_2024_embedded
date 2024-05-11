@@ -8,7 +8,7 @@
 	"installers" : [],
 	"paths" : 
 	{
-		"build" : "external_lib/tft/ST7735_TFT_lib",
-		"source" : "external_lib/tft/ST7735_TFT_lib"
+		"build" : "external_lib/display/SSD1306",
+		"source" : "external_lib/display/SSD1306"
 	}
 }

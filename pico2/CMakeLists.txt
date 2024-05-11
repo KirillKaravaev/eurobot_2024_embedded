@@ -23,7 +23,7 @@ target_link_libraries(pico2
     microros
     pico_uart_transports
     stepper
-    tft
+    display
 )
 
 target_include_directories(pico2 PUBLIC

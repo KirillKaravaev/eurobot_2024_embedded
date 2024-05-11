@@ -173,7 +173,7 @@
 /home/kirill/Projects/Pico/test/pico2/build/external_lib/pico_uart_transport/CMakeFiles/rebuild_cache.dir
 /home/kirill/Projects/Pico/test/pico2/build/external_lib/stepper/CMakeFiles/edit_cache.dir
 /home/kirill/Projects/Pico/test/pico2/build/external_lib/stepper/CMakeFiles/rebuild_cache.dir
-/home/kirill/Projects/Pico/test/pico2/build/external_lib/tft/CMakeFiles/edit_cache.dir
-/home/kirill/Projects/Pico/test/pico2/build/external_lib/tft/CMakeFiles/rebuild_cache.dir
-/home/kirill/Projects/Pico/test/pico2/build/external_lib/tft/ST7735_TFT_lib/CMakeFiles/edit_cache.dir
-/home/kirill/Projects/Pico/test/pico2/build/external_lib/tft/ST7735_TFT_lib/CMakeFiles/rebuild_cache.dir
+/home/kirill/Projects/Pico/test/pico2/build/external_lib/display/CMakeFiles/edit_cache.dir
+/home/kirill/Projects/Pico/test/pico2/build/external_lib/display/CMakeFiles/rebuild_cache.dir
+/home/kirill/Projects/Pico/test/pico2/build/external_lib/display/SSD1306/CMakeFiles/edit_cache.dir
+/home/kirill/Projects/Pico/test/pico2/build/external_lib/display/SSD1306/CMakeFiles/rebuild_cache.dir

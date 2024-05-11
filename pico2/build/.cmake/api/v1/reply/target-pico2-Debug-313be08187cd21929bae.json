@@ -547,15 +547,15 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/tft"
+					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/display"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib"
+					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/display/SSD1306"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/include"
+					"path" : "/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/include"
 				}
 			],
 			"language" : "CXX",
@@ -573,11 +573,7 @@
 				42,
 				70,
 				71,
-				72,
-				73,
-				74,
-				75,
-				76
+				72
 			]
 		},
 		{
@@ -981,15 +977,15 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/tft"
+					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/display"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib"
+					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/display/SSD1306"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/include"
+					"path" : "/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/include"
 				}
 			],
 			"language" : "C",
@@ -1060,7 +1056,7 @@
 				67,
 				68,
 				69,
-				77
+				73
 			]
 		},
 		{
@@ -1461,15 +1457,15 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/tft"
+					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/display"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib"
+					"path" : "/home/kirill/Projects/Pico/test/pico2/external_lib/display/SSD1306"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/include"
+					"path" : "/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/include"
 				}
 			],
 			"language" : "ASM",
@@ -2420,11 +2416,7 @@
 				70,
 				71,
 				72,
-				73,
-				74,
-				75,
-				76,
-				77
+				73
 			]
 		},
 		{
@@ -2876,43 +2868,19 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "external_lib/tft/tft.cpp",
+			"path" : "external_lib/display/display.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp",
+			"path" : "external_lib/display/SSD1306/SSD1306.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 1,
-			"path" : "/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c",
+			"path" : "/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -41,7 +41,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/kirill/Projects/Pico/test/pico2/build/external_lib/pico_uart_transport/cmake_install.cmake")
   include("/home/kirill/Projects/Pico/test/pico2/build/external_lib/stepper/cmake_install.cmake")
-  include("/home/kirill/Projects/Pico/test/pico2/build/external_lib/tft/cmake_install.cmake")
+  include("/home/kirill/Projects/Pico/test/pico2/build/external_lib/display/cmake_install.cmake")
 
 endif()
 

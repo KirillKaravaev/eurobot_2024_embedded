@@ -207,6 +207,54 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
+external_lib/display/SSD1306/SSD1306.obj: external_lib/display/SSD1306/SSD1306.cpp.obj
+.PHONY : external_lib/display/SSD1306/SSD1306.obj
+
+# target to build an object file
+external_lib/display/SSD1306/SSD1306.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj
+.PHONY : external_lib/display/SSD1306/SSD1306.cpp.obj
+
+external_lib/display/SSD1306/SSD1306.i: external_lib/display/SSD1306/SSD1306.cpp.i
+.PHONY : external_lib/display/SSD1306/SSD1306.i
+
+# target to preprocess a source file
+external_lib/display/SSD1306/SSD1306.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.i
+.PHONY : external_lib/display/SSD1306/SSD1306.cpp.i
+
+external_lib/display/SSD1306/SSD1306.s: external_lib/display/SSD1306/SSD1306.cpp.s
+.PHONY : external_lib/display/SSD1306/SSD1306.s
+
+# target to generate assembly for a file
+external_lib/display/SSD1306/SSD1306.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.s
+.PHONY : external_lib/display/SSD1306/SSD1306.cpp.s
+
+external_lib/display/display.obj: external_lib/display/display.cpp.obj
+.PHONY : external_lib/display/display.obj
+
+# target to build an object file
+external_lib/display/display.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj
+.PHONY : external_lib/display/display.cpp.obj
+
+external_lib/display/display.i: external_lib/display/display.cpp.i
+.PHONY : external_lib/display/display.i
+
+# target to preprocess a source file
+external_lib/display/display.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/display/display.cpp.i
+.PHONY : external_lib/display/display.cpp.i
+
+external_lib/display/display.s: external_lib/display/display.cpp.s
+.PHONY : external_lib/display/display.s
+
+# target to generate assembly for a file
+external_lib/display/display.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/display/display.cpp.s
+.PHONY : external_lib/display/display.cpp.s
+
 external_lib/pico_uart_transport/pico_uart_transports.obj: external_lib/pico_uart_transport/pico_uart_transports.c.obj
 .PHONY : external_lib/pico_uart_transport/pico_uart_transports.obj
 
@@ -254,150 +302,6 @@ external_lib/stepper/stepper.s: external_lib/stepper/stepper.cpp.s
 external_lib/stepper/stepper.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.s
 .PHONY : external_lib/stepper/stepper.cpp.s
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.obj
-
-# target to build an object file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.i
-
-# target to preprocess a source file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.s
-
-# target to generate assembly for a file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.obj
-
-# target to build an object file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.i
-
-# target to preprocess a source file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.s
-
-# target to generate assembly for a file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.obj
-
-# target to build an object file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.i
-
-# target to preprocess a source file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.s
-
-# target to generate assembly for a file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.obj
-
-# target to build an object file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.i
-
-# target to preprocess a source file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.s
-
-# target to generate assembly for a file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.obj: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.obj
-
-# target to build an object file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.i: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.i
-
-# target to preprocess a source file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i
-
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.s: external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.s
-
-# target to generate assembly for a file
-external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s
-.PHONY : external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s
-
-external_lib/tft/tft.obj: external_lib/tft/tft.cpp.obj
-.PHONY : external_lib/tft/tft.obj
-
-# target to build an object file
-external_lib/tft/tft.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj
-.PHONY : external_lib/tft/tft.cpp.obj
-
-external_lib/tft/tft.i: external_lib/tft/tft.cpp.i
-.PHONY : external_lib/tft/tft.i
-
-# target to preprocess a source file
-external_lib/tft/tft.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.i
-.PHONY : external_lib/tft/tft.cpp.i
-
-external_lib/tft/tft.s: external_lib/tft/tft.cpp.s
-.PHONY : external_lib/tft/tft.s
-
-# target to generate assembly for a file
-external_lib/tft/tft.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.s
-.PHONY : external_lib/tft/tft.cpp.s
 
 home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
@@ -1151,6 +1055,30 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
+home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj
+
+# target to build an object file
+home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+
+home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i
+
+# target to preprocess a source file
+home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+
+home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s
+
+# target to generate assembly for a file
+home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj
 
@@ -1206,30 +1134,6 @@ home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/kirill/pico/pi
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
-
-home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj
-
-# target to build an object file
-home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-
-home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i
-
-# target to preprocess a source file
-home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-
-home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
-.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s
-
-# target to generate assembly for a file
-home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico2.dir/build.make CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
-.PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj
@@ -1918,30 +1822,18 @@ help:
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... bs2_default"
 	@echo "... pico2"
+	@echo "... external_lib/display/SSD1306/SSD1306.obj"
+	@echo "... external_lib/display/SSD1306/SSD1306.i"
+	@echo "... external_lib/display/SSD1306/SSD1306.s"
+	@echo "... external_lib/display/display.obj"
+	@echo "... external_lib/display/display.i"
+	@echo "... external_lib/display/display.s"
 	@echo "... external_lib/pico_uart_transport/pico_uart_transports.obj"
 	@echo "... external_lib/pico_uart_transport/pico_uart_transports.i"
 	@echo "... external_lib/pico_uart_transport/pico_uart_transports.s"
 	@echo "... external_lib/stepper/stepper.obj"
 	@echo "... external_lib/stepper/stepper.i"
 	@echo "... external_lib/stepper/stepper.s"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT.obj"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT.i"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT.s"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.obj"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.i"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.s"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.obj"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.i"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.s"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.obj"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.i"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.s"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.obj"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.i"
-	@echo "... external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.s"
-	@echo "... external_lib/tft/tft.obj"
-	@echo "... external_lib/tft/tft.i"
-	@echo "... external_lib/tft/tft.s"
 	@echo "... home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/kirill/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2036,6 +1928,9 @@ help:
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
+	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj"
+	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i"
+	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s"
@@ -2043,9 +1938,6 @@ help:
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s"
-	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj"
-	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i"
-	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i"
 	@echo "... home/kirill/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s"

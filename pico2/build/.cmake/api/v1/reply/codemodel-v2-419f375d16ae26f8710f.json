@@ -1055,30 +1055,30 @@
 					"source" : "external_lib/stepper"
 				},
 				{
-					"build" : "external_lib/tft",
+					"build" : "external_lib/display",
 					"childIndexes" : 
 					[
 						85
 					],
-					"jsonFile" : "directory-external_lib.tft-Debug-5e889bacfb934ea16e3e.json",
+					"jsonFile" : "directory-external_lib.display-Debug-d7d713226f53cd4d245b.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
 					},
 					"parentIndex" : 81,
 					"projectIndex" : 0,
-					"source" : "external_lib/tft"
+					"source" : "external_lib/display"
 				},
 				{
-					"build" : "external_lib/tft/ST7735_TFT_lib",
-					"jsonFile" : "directory-external_lib.tft.ST7735_TFT_lib-Debug-b9d45ca9cd949afabbf0.json",
+					"build" : "external_lib/display/SSD1306",
+					"jsonFile" : "directory-external_lib.display.SSD1306-Debug-249a93f5c6497c0236cf.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
 					},
 					"parentIndex" : 84,
 					"projectIndex" : 0,
-					"source" : "external_lib/tft/ST7735_TFT_lib"
+					"source" : "external_lib/display/SSD1306"
 				}
 			],
 			"name" : "Debug",
@@ -1248,7 +1248,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "pico2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-pico2-Debug-ac63a9f3fabe450bc0aa.json",
+					"jsonFile" : "target-pico2-Debug-313be08187cd21929bae.json",
 					"name" : "pico2",
 					"projectIndex" : 0
 				}

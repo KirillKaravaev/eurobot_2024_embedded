@@ -11,16 +11,18 @@
 #include "pico/stdlib.h"
 #include "pico_uart_transports.c"  //только так (расширене не .h ,а .c) работает передача данных по юарт.
 #include "stepper.h"
-//#include "tft.h"
+#include "display.h"
 
 const uint LED_PIN = 25;
 int cnt = 1;
 
+DISPLAY display;
+
 rcl_publisher_t state_publisher;
 std_msgs__msg__Int8 state_msg;
 
-rcl_subscription_t tft_subscriber;
-std_msgs__msg__Char tft_msg;
+rcl_subscription_t display_subscriber;
+std_msgs__msg__Char display_msg;
 
 rcl_subscription_t stepper_subscriber;
 geometry_msgs__msg__Vector3 stepper_msg;
@@ -48,9 +50,10 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 
 
 
-void tft_subscriber_callback(const void * msgin)
+void display_subscriber_callback(const void * msgin)
 {
     const std_msgs__msg__Char * msg = (const std_msgs__msg__Char *)msgin;
+    display.Write_score(32, 64, msg->data);
 //    Test0( msg->data );
     blink();
 }
@@ -75,7 +78,7 @@ int main()
 	);
 
     stepper_init();
-//    tft_init();
+    display.display_init();
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
 
@@ -111,10 +114,10 @@ int main()
         "stepper_topic");
 
     rclc_subscription_init_default(
-        &tft_subscriber,
+        &display_subscriber,
         &node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Char),
-        "screen_topic");
+        "display_topic");
 
     rclc_publisher_init_default(
         &state_publisher,
@@ -135,7 +138,7 @@ int main()
 
     
     rclc_executor_add_subscription(&executor, &stepper_subscriber, &stepper_msg, &stepper_subscriber_callback, ON_NEW_DATA);
-    rclc_executor_add_subscription(&executor, &tft_subscriber, &tft_msg, &tft_subscriber_callback, ON_NEW_DATA);
+    rclc_executor_add_subscription(&executor, &display_subscriber, &display_msg, &display_subscriber_callback, ON_NEW_DATA);
  
 
 

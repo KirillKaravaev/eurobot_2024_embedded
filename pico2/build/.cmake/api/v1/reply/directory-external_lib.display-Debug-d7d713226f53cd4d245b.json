@@ -8,7 +8,7 @@
 	"installers" : [],
 	"paths" : 
 	{
-		"build" : "external_lib/tft",
-		"source" : "external_lib/tft"
+		"build" : "external_lib/display",
+		"source" : "external_lib/display"
 	}
 }

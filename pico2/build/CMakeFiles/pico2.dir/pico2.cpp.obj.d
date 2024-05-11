@@ -225,4 +225,5 @@ CMakeFiles/pico2.dir/pico2.cpp.obj: \
  /home/kirill/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
  /home/kirill/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
  /home/kirill/Projects/Pico/test/pico2/external_lib/pico_uart_transport/pico_uart_transports.c \
- /home/kirill/Projects/Pico/test/pico2/external_lib/stepper/stepper.h
+ /home/kirill/Projects/Pico/test/pico2/external_lib/stepper/stepper.h \
+ /home/kirill/Projects/Pico/test/pico2/external_lib/display/display.h

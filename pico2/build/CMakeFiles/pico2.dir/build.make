@@ -1052,103 +1052,47 @@ CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.s"
 	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/stepper/stepper.cpp -o CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.s
 
-CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj: CMakeFiles/pico2.dir/flags.make
-CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj: ../external_lib/tft/tft.cpp
-CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj: CMakeFiles/pico2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj -MF CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj.d -o CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj -c /home/kirill/Projects/Pico/test/pico2/external_lib/tft/tft.cpp
+CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj: CMakeFiles/pico2.dir/flags.make
+CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj: ../external_lib/display/display.cpp
+CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj: CMakeFiles/pico2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj"
+	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj -MF CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj.d -o CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj -c /home/kirill/Projects/Pico/test/pico2/external_lib/display/display.cpp
 
-CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.i"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/Projects/Pico/test/pico2/external_lib/tft/tft.cpp > CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.i
+CMakeFiles/pico2.dir/external_lib/display/display.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pico2.dir/external_lib/display/display.cpp.i"
+	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/Projects/Pico/test/pico2/external_lib/display/display.cpp > CMakeFiles/pico2.dir/external_lib/display/display.cpp.i
 
-CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.s"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/tft/tft.cpp -o CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.s
+CMakeFiles/pico2.dir/external_lib/display/display.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/display/display.cpp.s"
+	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/display/display.cpp -o CMakeFiles/pico2.dir/external_lib/display/display.cpp.s
 
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj: CMakeFiles/pico2.dir/flags.make
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj: ../external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj: CMakeFiles/pico2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj -MF CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj.d -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj -c /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp
+CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj: CMakeFiles/pico2.dir/flags.make
+CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj: ../external_lib/display/SSD1306/SSD1306.cpp
+CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj: CMakeFiles/pico2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj"
+	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj -MF CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj.d -o CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj -c /home/kirill/Projects/Pico/test/pico2/external_lib/display/SSD1306/SSD1306.cpp
 
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp > CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.i
+CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.i"
+	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/Projects/Pico/test/pico2/external_lib/display/SSD1306/SSD1306.cpp > CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.i
 
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.s
+CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.s"
+	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/display/SSD1306/SSD1306.cpp -o CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.s
 
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj: CMakeFiles/pico2.dir/flags.make
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj: ../external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj: CMakeFiles/pico2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj -MF CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj.d -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj -c /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp
+CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: CMakeFiles/pico2.dir/flags.make
+CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: /home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: CMakeFiles/pico2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -MF CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d -o CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -c /home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
 
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp > CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.i
+CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c > CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.s
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj: CMakeFiles/pico2.dir/flags.make
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj: ../external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj: CMakeFiles/pico2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj -MF CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj.d -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj -c /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp > CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.i
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.s
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj: CMakeFiles/pico2.dir/flags.make
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj: ../external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj: CMakeFiles/pico2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj -MF CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj.d -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj -c /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp > CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.i
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.s
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj: CMakeFiles/pico2.dir/flags.make
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj: ../external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj: CMakeFiles/pico2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj -MF CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj.d -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj -c /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp > CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.i
-
-CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp -o CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.s
-
-CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/pico2.dir/flags.make
-CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
-CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/pico2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -MF CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d -o CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -c /home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
-
-CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c > CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-
-CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c -o CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c -o CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
 # Object files for target pico2
 pico2_OBJECTS = \
@@ -1223,13 +1167,9 @@ pico2_OBJECTS = \
 "CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj" \
 "CMakeFiles/pico2.dir/external_lib/pico_uart_transport/pico_uart_transports.c.obj" \
 "CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.obj" \
-"CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj" \
-"CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj" \
-"CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj" \
-"CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj" \
-"CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj" \
-"CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj" \
-"CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+"CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj" \
+"CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj" \
+"CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
 
 # External object files for target pico2
 pico2_EXTERNAL_OBJECTS =
@@ -1305,17 +1245,13 @@ pico2.elf: CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/lib/tinyusb/src/common
 pico2.elf: CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 pico2.elf: CMakeFiles/pico2.dir/external_lib/pico_uart_transport/pico_uart_transports.c.obj
 pico2.elf: CMakeFiles/pico2.dir/external_lib/stepper/stepper.cpp.obj
-pico2.elf: CMakeFiles/pico2.dir/external_lib/tft/tft.cpp.obj
-pico2.elf: CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT.cpp.obj
-pico2.elf: CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_graphics.cpp.obj
-pico2.elf: CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Print.cpp.obj
-pico2.elf: CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Font.cpp.obj
-pico2.elf: CMakeFiles/pico2.dir/external_lib/tft/ST7735_TFT_lib/ST7735_TFT_Bitmap_Data.cpp.obj
-pico2.elf: CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+pico2.elf: CMakeFiles/pico2.dir/external_lib/display/display.cpp.obj
+pico2.elf: CMakeFiles/pico2.dir/external_lib/display/SSD1306/SSD1306.cpp.obj
+pico2.elf: CMakeFiles/pico2.dir/home/kirill/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 pico2.elf: CMakeFiles/pico2.dir/build.make
 pico2.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 pico2.elf: CMakeFiles/pico2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Linking CXX executable pico2.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kirill/Projects/Pico/test/pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Linking CXX executable pico2.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pico2.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objcopy -Oihex /home/kirill/Projects/Pico/test/pico2/build/pico2.elf pico2.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary /home/kirill/Projects/Pico/test/pico2/build/pico2.elf pico2.bin
