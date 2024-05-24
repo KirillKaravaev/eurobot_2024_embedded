@@ -210,7 +210,7 @@ void SSD1306:: WriteBigChar(uint x, uint y, char ch) {
         Framebuffer[fb_idx + 1] = w & 0x0ff;
         Framebuffer[fb_idx + 128] = w >> 8;
         Framebuffer[fb_idx + 129] = w >> 8;
-        fb_idx += 2;
+        fb_idx += 4;
     }
 }
 

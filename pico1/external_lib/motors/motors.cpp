@@ -9,36 +9,36 @@
 
 void motor1_controller(int speed) {
     if (speed < 0)
-        gpio_put(DIR_PIN_1, 1);
-    else
         gpio_put(DIR_PIN_1, 0);
+    else
+        gpio_put(DIR_PIN_1, 1);
     // Определяем необходимую скважность шим, от которой зависит скорость мотора
     pwm_set_gpio_level(MOTOR_PWM_PIN_1, abs(speed));
 }
 
 void motor2_controller(int speed) {
     if (speed < 0)
-        gpio_put(DIR_PIN_2, 1);
-    else
         gpio_put(DIR_PIN_2, 0);
+    else
+        gpio_put(DIR_PIN_2, 1);
     // Определяем необходимую скважность шим, от которой зависит скорость мотора
     pwm_set_gpio_level(MOTOR_PWM_PIN_2, abs(speed));
 }
 
 void motor3_controller(int speed) {
     if (speed < 0)
-        gpio_put(DIR_PIN_3, 1);
-    else
         gpio_put(DIR_PIN_3, 0);
+    else
+        gpio_put(DIR_PIN_3, 1);
     // Определяем необходимую скважность шим, от которой зависит скорость мотора
     pwm_set_gpio_level(MOTOR_PWM_PIN_3, abs(speed));
 }
 
 void motor4_controller(int speed) {
     if (speed < 0)
-        gpio_put(DIR_PIN_4, 1);
-    else
         gpio_put(DIR_PIN_4, 0);
+    else
+        gpio_put(DIR_PIN_4, 1);
     // Определяем необходимую скважность шим, от которой зависит скорость мотора
     pwm_set_gpio_level(MOTOR_PWM_PIN_4, abs(speed));
 }

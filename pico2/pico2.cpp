@@ -4,8 +4,9 @@
 #include <rclc/executor.h>
 #include <rclc/rclc.h>
 #include <rmw_microros/rmw_microros.h>
-#include <std_msgs/msg/char.h>
+//#include <std_msgs/msg/char.h>
 #include <std_msgs/msg/int8.h>
+#include <std_msgs/msg/u_int8.h>
 #include <stdio.h>
 
 #include "pico/stdlib.h"
@@ -14,7 +15,7 @@
 #include "display.h"
 
 const uint LED_PIN = 25;
-int cnt = 1;
+bool flag = true;
 
 DISPLAY display;
 
@@ -22,25 +23,19 @@ rcl_publisher_t state_publisher;
 std_msgs__msg__Int8 state_msg;
 
 rcl_subscription_t display_subscriber;
-std_msgs__msg__Char display_msg;
+std_msgs__msg__UInt8 display_msg;
 
 rcl_subscription_t stepper_subscriber;
 geometry_msgs__msg__Vector3 stepper_msg;
 
-    // void stepper_init();
+    
 
-    // Простейшая мигалка
-    void
-    blink() {
-    if (cnt == 1) {  
-	gpio_put(LED_PIN, 1);  
-	cnt = 0;
+// Простейшая мигалка
+void blink() {
+    gpio_put(LED_PIN, flag);
+    flag = !flag;
 }
-else if(cnt == 0){
-	gpio_put(LED_PIN, 0);  
-	cnt = 1;
-}
-}
+
 
 void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 {
@@ -52,9 +47,9 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 
 void display_subscriber_callback(const void * msgin)
 {
-    const std_msgs__msg__Char * msg = (const std_msgs__msg__Char *)msgin;
-    display.Write_score(32, 64, msg->data);
-//    Test0( msg->data );
+    const std_msgs__msg__UInt8 *msg = (const std_msgs__msg__UInt8 *)msgin;
+    display.Print_string(30, 30, msg->data);
+    //    Test0( msg->data );
     blink();
 }
 
@@ -116,7 +111,7 @@ int main()
     rclc_subscription_init_default(
         &display_subscriber,
         &node,
-        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Char),
+        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, UInt8),
         "display_topic");
 
     rclc_publisher_init_default(

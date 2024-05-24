@@ -73,7 +73,7 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time) {
     rpm_msg.y = current_rpm.rpm3;
     rpm_msg.z = current_rpm.rpm4;
 
-    rcl_ret_t ret = rcl_publish(&rpm_publisher, &rpm_msg, NULL);
+    rcl_ret_t ret1 = rcl_publish(&rpm_publisher, &rpm_msg, NULL);
 
     imu_dat = imu.get_data();
 
@@ -81,7 +81,7 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time) {
     imu_msg.linear_acceleration.x = imu_dat.lin_accel_x;
     imu_msg.linear_acceleration.y = imu_dat.lin_accel_y;
 
-    rcl_ret_t ret1 = rcl_publish(&imu_publisher, &imu_msg, NULL);
+    rcl_ret_t ret = rcl_publish(&imu_publisher, &imu_msg, NULL);
 }
 
 void twist_subscriber_callback(const void *msgin) {
@@ -97,14 +97,15 @@ void twist_subscriber_callback(const void *msgin) {
         msg->linear.y,
         msg->angular.z);
 
-    // Kinematics::rpm rpm; // Объявляем название структуры rpm внутри класса Kinematics. Операцией объявления области видимости :: мы как бы смотрим изнутри класса
-    // int motor1_rpm = rpm.motor1; //и тем самым видим уже его элементы, включая искомую структуру rpm. И уже по месту даем ей название rpm, а дальше по этому названию
+
+
+    
     motor1_controller((int)req_rpm.motor1);  // обращаемся к элементу motor1
-    // int motor2_rpm = rpm.motor2;
+  
     motor2_controller((int)req_rpm.motor2);
-    // int motor3_rpm = rpm.motor3;
+    
     motor3_controller((int)req_rpm.motor3);
-    // int motor4_rpm = rpm.motor4;
+    
     motor4_controller((int)req_rpm.motor4);
 
     blink();
@@ -188,7 +189,6 @@ int main() {
         RCL_MS_TO_NS(200),
         timer_callback);
 
-    //    std_msgs__msg__String__init(&sub_msg);
 
     rclc_executor_init(&executor, &support.context, 3, &allocator);
     rclc_executor_add_timer(&executor, &timer);
@@ -196,9 +196,7 @@ int main() {
 
     rclc_executor_add_subscription(&executor, &twist_subscriber, &twist_msg, &twist_subscriber_callback, ON_NEW_DATA);
     rclc_executor_add_subscription(&executor, &servo_subscriber, &servo_msg, &servo_subscriber_callback, ON_NEW_DATA);
-    //   gpio_put(LED_PIN, 1);
-
-    //    msg.data = 0;
+   
     while (true) {
         rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
     }

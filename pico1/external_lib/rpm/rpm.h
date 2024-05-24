@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #define IMP_CNT_PIN1 20
-#define IMP_CNT_PIN2 2
+#define IMP_CNT_PIN2 3
 #define IMP_CNT_PIN3 17
 #define IMP_CNT_PIN4 21
 

@@ -26,7 +26,16 @@ void DISPLAY::display_init() {
     ssd1306.initialise();  //если не облачить все функции  SSD1306 в класс, то не получится здесь использовать их. Мы же просто объявляем класс здесь и используекм его функции
 }
 
-void DISPLAY::Write_score(uint x, uint y, char ch) {
+// На вход функция принимает целочисленную переменную, в функции sprintf(str, "%02u", ch) преобразует в массив символов и передает адрес первого элемента
+// в функцию WriteBigString
+void DISPLAY::Print_string(uint x, uint y, uint ch) {
+    sprintf(str, "%02u", ch);
+    ssd1306.ClearDisplay();
+    ssd1306.WriteBigString(x, y, str);
+    ssd1306.UpdateDisplay();
+}
+
+void DISPLAY::Print_char(uint x, uint y, char ch) {
     ssd1306.UpdateDisplay();
     ssd1306.WriteBigChar(x, y, ch);
 }

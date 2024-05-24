@@ -1,4 +1,4 @@
-# Install script for directory: /home/kirill/Projects/Pico/test/pico2/external_lib/tft/ST7735_TFT_lib
+# Install script for directory: /home/kirill/Projects/Pico/test/pico2/external_lib/stepperV2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

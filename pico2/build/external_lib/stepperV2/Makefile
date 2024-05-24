@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kirill/Projects/Pico/test/pico2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Projects/Pico/test/pico2/build/CMakeFiles /home/kirill/Projects/Pico/test/pico2/build/external_lib/tft//CMakeFiles/progress.marks
-	cd /home/kirill/Projects/Pico/test/pico2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_lib/tft/all
+	cd /home/kirill/Projects/Pico/test/pico2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Projects/Pico/test/pico2/build/CMakeFiles /home/kirill/Projects/Pico/test/pico2/build/external_lib/stepperV2//CMakeFiles/progress.marks
+	cd /home/kirill/Projects/Pico/test/pico2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_lib/stepperV2/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Projects/Pico/test/pico2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kirill/Projects/Pico/test/pico2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_lib/tft/clean
+	cd /home/kirill/Projects/Pico/test/pico2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_lib/stepperV2/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,12 +103,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kirill/Projects/Pico/test/pico2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_lib/tft/preinstall
+	cd /home/kirill/Projects/Pico/test/pico2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_lib/stepperV2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kirill/Projects/Pico/test/pico2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_lib/tft/preinstall
+	cd /home/kirill/Projects/Pico/test/pico2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external_lib/stepperV2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends

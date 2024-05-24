@@ -178,15 +178,15 @@ CMakeFiles/pico2.dir/pico2.cpp.obj: \
  /home/kirill/Projects/Pico/test/pico2/libmicroros/include/uxr/client/profile/transport/stream_framing/stream_framing_protocol.h \
  /home/kirill/Projects/Pico/test/pico2/libmicroros/include/rmw_microros/timing.h \
  /home/kirill/Projects/Pico/test/pico2/libmicroros/include/rmw_microros/custom_transport.h \
- /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/char.h \
- /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/char__struct.h \
- /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/char__functions.h \
- /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/rosidl_generator_c__visibility_control.h \
- /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/char__type_support.h \
  /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/int8.h \
  /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/int8__struct.h \
  /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/int8__functions.h \
+ /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/rosidl_generator_c__visibility_control.h \
  /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/int8__type_support.h \
+ /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/u_int8.h \
+ /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/u_int8__struct.h \
+ /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/u_int8__functions.h \
+ /home/kirill/Projects/Pico/test/pico2/libmicroros/include/std_msgs/msg/detail/u_int8__type_support.h \
  /home/kirill/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
  /home/kirill/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /home/kirill/pico/pico-sdk/src/common/pico_base/include/pico/types.h \

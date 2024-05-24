@@ -3313,15 +3313,15 @@ CMakeFiles/pico2.dir/pico2.cpp.obj: ../pico2.cpp \
   ../libmicroros/include/uxr/client/profile/transport/stream_framing/stream_framing_protocol.h \
   ../libmicroros/include/rmw_microros/timing.h \
   ../libmicroros/include/rmw_microros/custom_transport.h \
-  ../libmicroros/include/std_msgs/msg/char.h \
-  ../libmicroros/include/std_msgs/msg/detail/char__struct.h \
-  ../libmicroros/include/std_msgs/msg/detail/char__functions.h \
-  ../libmicroros/include/std_msgs/msg/rosidl_generator_c__visibility_control.h \
-  ../libmicroros/include/std_msgs/msg/detail/char__type_support.h \
   ../libmicroros/include/std_msgs/msg/int8.h \
   ../libmicroros/include/std_msgs/msg/detail/int8__struct.h \
   ../libmicroros/include/std_msgs/msg/detail/int8__functions.h \
+  ../libmicroros/include/std_msgs/msg/rosidl_generator_c__visibility_control.h \
   ../libmicroros/include/std_msgs/msg/detail/int8__type_support.h \
+  ../libmicroros/include/std_msgs/msg/u_int8.h \
+  ../libmicroros/include/std_msgs/msg/detail/u_int8__struct.h \
+  ../libmicroros/include/std_msgs/msg/detail/u_int8__functions.h \
+  ../libmicroros/include/std_msgs/msg/detail/u_int8__type_support.h \
   /home/kirill/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
   /home/kirill/pico/pico-sdk/src/common/pico_base/include/pico.h \
   /home/kirill/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
@@ -3364,6 +3364,10 @@ CMakeFiles/pico2.dir/pico2.cpp.obj: ../pico2.cpp \
   ../external_lib/display/display.h
 
 
+../libmicroros/include/std_msgs/msg/detail/u_int8__functions.h:
+
+../libmicroros/include/std_msgs/msg/u_int8.h:
+
 ../libmicroros/include/std_msgs/msg/detail/int8__type_support.h:
 
 ../libmicroros/include/std_msgs/msg/detail/int8__functions.h:
@@ -3371,10 +3375,6 @@ CMakeFiles/pico2.dir/pico2.cpp.obj: ../pico2.cpp \
 ../libmicroros/include/std_msgs/msg/detail/int8__struct.h:
 
 ../libmicroros/include/std_msgs/msg/int8.h:
-
-../libmicroros/include/std_msgs/msg/detail/char__struct.h:
-
-../libmicroros/include/std_msgs/msg/char.h:
 
 ../libmicroros/include/rmw_microros/timing.h:
 
@@ -3417,6 +3417,8 @@ CMakeFiles/pico2.dir/pico2.cpp.obj: ../pico2.cpp \
 ../libmicroros/include/action_msgs/srv/detail/cancel_goal__struct.h:
 
 ../libmicroros/include/action_msgs/srv/cancel_goal.h:
+
+../libmicroros/include/std_msgs/msg/detail/u_int8__struct.h:
 
 ../libmicroros/include/action_msgs/msg/detail/goal_status_array__type_support.h:
 
@@ -3612,8 +3614,6 @@ CMakeFiles/pico2.dir/pico2.cpp.obj: ../pico2.cpp \
 
 /home/kirill/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h:
 
-../libmicroros/include/std_msgs/msg/detail/char__type_support.h:
-
 /home/kirill/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c:
 
 /home/kirill/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h:
@@ -3631,8 +3631,6 @@ CMakeFiles/pico2.dir/pico2.cpp.obj: ../pico2.cpp \
 ../libmicroros/include/std_msgs/msg/rosidl_generator_c__visibility_control.h:
 
 /home/kirill/pico/pico-sdk/src/rp2_common/pico_double/double_math.c:
-
-../libmicroros/include/std_msgs/msg/detail/char__functions.h:
 
 ../libmicroros/include/action_msgs/msg/detail/goal_status_array__functions.h:
 
@@ -3781,6 +3779,8 @@ generated/pico_base/pico/version.h:
 ../libmicroros/include/rmw/macros.h:
 
 /usr/include/newlib/machine/ieeefp.h:
+
+../libmicroros/include/std_msgs/msg/detail/u_int8__type_support.h:
 
 /usr/include/newlib/sys/_types.h:
 

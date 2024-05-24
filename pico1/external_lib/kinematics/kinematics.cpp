@@ -101,12 +101,12 @@ Kinematics::rpm Kinematics::calculateRPM(float linear_x, float linear_y, float a
 //                 y    
 //                 /|\     
 //                  |     
-//        (2) //----|----\\ (1)
+//        (4) //----|----\\ (1)
 //            :     |     :
 //     _______:_____|_____:_______\ x
 //            :     |     :       /
 //            :     |     :
-//        (3) \\----|----// (4)
+//        (3) \\----|----// (2)
 //                  |      
 //                  |    
 //for more information about kinematics model - https://www.youtube.com/watch?v=-wzl8XJopgg  
@@ -115,19 +115,19 @@ Kinematics::rpm Kinematics::calculateRPM(float linear_x, float linear_y, float a
     //                                                                  //                 y
     //calculate for the target motor RPM and direction                  //                 /|\ 
     //1 motor                                                           //                  |       
-    rpm.motor1 = scaler*(- x_rpm + y_rpm) + tan_rpm;                    //        (2) //----|----\\ (1)
+    rpm.motor1 = scaler*( x_rpm - y_rpm) - tan_rpm;                    //        (4) //----|----\\ (1)
     rpm.motor1 = constrain(rpm.motor1, -max_rpm_, max_rpm_);            //            :     |     :
     //                                                                  //     _______:_____|_____:_______\ x
     //2 motor                                                           //            :     |     :       /
-    rpm.motor2 = scaler*(- x_rpm - y_rpm) + tan_rpm;                    //            :     |     :
-    rpm.motor2 = constrain(rpm.motor2, -max_rpm_, max_rpm_);            //        (3) \\----|----// (4)
+    rpm.motor2 = scaler*(- x_rpm - y_rpm) - tan_rpm;                    //            :     |     :
+    rpm.motor2 = constrain(rpm.motor2, -max_rpm_, max_rpm_);            //        (3) \\----|----// (2)
     //                                                                  //                  |      
     //3 motor                                                           //                  |    
-    rpm.motor3 = scaler*( x_rpm - y_rpm) + tan_rpm;                     //for more information about kinematics model - https://www.youtube.com/watch?v=-wzl8XJopgg  
+    rpm.motor3 = scaler*(- x_rpm + y_rpm) - tan_rpm;                     //for more information about kinematics model - https://www.youtube.com/watch?v=-wzl8XJopgg  
     rpm.motor3 = constrain(rpm.motor3, -max_rpm_, max_rpm_);
 
     //4 motor
-    rpm.motor4 = scaler*( x_rpm + y_rpm) + tan_rpm;
+    rpm.motor4 = scaler*( x_rpm + y_rpm) - tan_rpm;
     rpm.motor4 = constrain(rpm.motor4, -max_rpm_, max_rpm_);
 
     return rpm;

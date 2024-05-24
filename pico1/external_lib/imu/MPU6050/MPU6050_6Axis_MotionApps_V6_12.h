@@ -39,7 +39,7 @@ THE SOFTWARE.
 
 #ifndef _MPU6050_6AXIS_MOTIONAPPS20_H_
 #define _MPU6050_6AXIS_MOTIONAPPS20_H_
-#define MPU6050_DMP_FIFO_RATE_DIVISOR 0x05
+#define MPU6050_DMP_FIFO_RATE_DIVISOR 0x03
 
 #include "I2Cdev.h"
 #include "helper_3dmath.h"
@@ -288,9 +288,9 @@ const unsigned char dmpMemory[MPU6050_DMP_CODE_SIZE] = {
 
 
 // this divisor is pre configured into the above image and can't be modified at this time.
- #ifndef MPU6050_DMP_FIFO_RATE_DIVISOR
- #define MPU6050_DMP_FIFO_RATE_DIVISOR 0x01 // The New instance of the Firmware has this as the default
- #endif
+// #ifndef MPU6050_DMP_FIFO_RATE_DIVISOR
+// #define MPU6050_DMP_FIFO_RATE_DIVISOR 0x01 // The New instance of the Firmware has this as the default
+// #endif
 
 // this is the most basic initialization I can create. with the intent that we access the register bytes as few times as needed to get the job done.
 // for detailed descriptins of all registers and there purpose google "MPU-6000/MPU-6050 Register Map and Descriptions"
